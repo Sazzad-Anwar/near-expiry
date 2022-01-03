@@ -1,5 +1,5 @@
 /node_modules
-pakcage.json
+package.json
 tailwind.config.js
 yarn.lock
 /.vscode
