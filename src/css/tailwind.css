@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .normal-transition {
+        @apply transition-all ease-in-out duration-300;
+    }
+
+    .red-bottom-line {
+        @apply after:content-['']
+        relative
+        after:absolute
+        after:-bottom-4
+        after:w-20
+        after:left-1/2
+        after:-translate-x-1/2
+        after:h-1
+        after:bg-red-600;
+    }
+
+    .white-bottom-line {
+        @apply after:content-['']
+        relative
+        after:absolute
+        after:-bottom-4
+        after:w-20
+        after:left-1/2
+        after:-translate-x-1/2
+        after:h-1
+        after:bg-white;
+    }
+
+    .red-bottom-line-start {
+        @apply after:content-['']
+        relative
+        after:absolute
+        after:-bottom-4
+        after:w-[3.4rem]
+        rtl:after:right-0
+        after:left-0
+        after:h-1
+        after:bg-red-600;
+    }
+
+    .black-bottom-line-start {
+        @apply after:content-['']
+        relative
+        after:absolute
+        after:-bottom-4
+        after:w-[3.4rem]
+        rtl:after:right-0
+        after:left-0
+        after:h-1
+        after:bg-black;
+    }
+
+    .btn-black {
+        @apply text-white rounded-lg bg-black;
+    }
+
+    .nav-link {
+        @apply relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-1 after:bg-white after:rounded-lg after:normal-transition;
+    }
+    .nav-hover {
+        @apply nav-link group-hover:after:w-10;
+    }
+
+    .link-hover {
+        @apply nav-link hover:after:w-10;
+    }
+
+    .active-nav {
+        @apply relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-10 after:h-1 after:bg-white after:rounded-lg;
+    }
+}

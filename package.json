@@ -1,0 +1,16 @@
+{
+    "name": "near-expiry",
+    "version": "1.0.0",
+    "description": "a e-commerce application",
+    "main": "index.js",
+    "repository": "https://github.com/Sazzad-Anwar/near-expiry.git",
+    "author": "sazzad-anwar <sazzadzihan@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/style.css --watch"
+    },
+    "dependencies": {
+        "@tailwindcss/line-clamp": "^0.3.0",
+        "tailwindcss": "^3.0.7"
+    }
+}
