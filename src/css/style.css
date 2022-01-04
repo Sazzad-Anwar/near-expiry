@@ -435,7 +435,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .red-bottom-line::after {
   position: absolute;
-  bottom: -1rem;
+  bottom: -0.5rem;
   left: 50%;
   height: 0.25rem;
   width: 5rem;
@@ -447,13 +447,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   content: var(--tw-content);
 }
 
+@media (min-width: 1024px) {
+  .red-bottom-line::after {
+    content: var(--tw-content);
+    bottom: -1rem;
+  }
+}
+
 .white-bottom-line {
   position: relative;
 }
 
 .white-bottom-line::after {
   position: absolute;
-  bottom: -1rem;
+  bottom: -0.5rem;
   left: 50%;
   height: 0.25rem;
   width: 5rem;
@@ -465,13 +472,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   content: var(--tw-content);
 }
 
+@media (min-width: 1024px) {
+  .white-bottom-line::after {
+    content: var(--tw-content);
+    bottom: -1rem;
+  }
+}
+
 .black-bottom-line-start {
   position: relative;
 }
 
 .black-bottom-line-start::after {
   position: absolute;
-  bottom: -1rem;
+  bottom: -0.5rem;
   left: 0px;
   height: 0.25rem;
   width: 3.4rem;
@@ -484,6 +498,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 [dir="rtl"] .black-bottom-line-start::after {
   content: var(--tw-content);
   right: 0px;
+}
+
+@media (min-width: 1024px) {
+  .black-bottom-line-start::after {
+    content: var(--tw-content);
+    bottom: -1rem;
+  }
 }
 
 .nav-hover {
@@ -1004,6 +1025,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[11\.25rem\] {
   height: 11.25rem !important;
+}
+
+.h-\[5\.938rem\] {
+  height: 5.938rem !important;
 }
 
 .h-7 {
@@ -2195,6 +2220,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:h-\[7\.625rem\] {
     height: 7.625rem !important;
+  }
+
+  .lg\:h-\[11\.25rem\] {
+    height: 11.25rem !important;
   }
 
   .lg\:w-\[4\.75rem\] {

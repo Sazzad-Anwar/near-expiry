@@ -11,7 +11,8 @@
         @apply after:content-['']
         relative
         after:absolute
-        after:-bottom-4
+        lg:after:-bottom-4
+        after:-bottom-2
         after:w-20
         after:left-1/2
         after:-translate-x-1/2
@@ -23,7 +24,8 @@
         @apply after:content-['']
         relative
         after:absolute
-        after:-bottom-4
+        lg:after:-bottom-4
+        after:-bottom-2
         after:w-20
         after:left-1/2
         after:-translate-x-1/2
@@ -35,7 +37,8 @@
         @apply after:content-['']
         relative
         after:absolute
-        after:-bottom-4
+        lg:after:-bottom-4
+        after:-bottom-2
         after:w-[3.4rem]
         rtl:after:right-0
         after:left-0
@@ -47,7 +50,8 @@
         @apply after:content-['']
         relative
         after:absolute
-        after:-bottom-4
+        lg:after:-bottom-4
+        after:-bottom-2
         after:w-[3.4rem]
         rtl:after:right-0
         after:left-0
