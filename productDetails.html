@@ -14,7 +14,6 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
         <script
-            defer
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
             referrerpolicy="no-referrer"
         ></script>
@@ -25,7 +24,7 @@
     </head>
     <body
         x-data="{navOpen:false,cartOpen:false}"
-        x-bind:class="navOpen || cartOpen? 'overflow-hidden':overflow-auto"
+        x-bind:class="navOpen || cartOpen? 'overflow-hidden':'overflow-auto'"
     >
         <!-- header nav -->
         <header

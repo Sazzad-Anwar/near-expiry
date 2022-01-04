@@ -4444,15 +4444,15 @@
 
                 window.addEventListener('scroll', () => {
                     let carouselHeight = $('#carousel-item').outerHeight();
-                    if (window.scrollY >= carouselHeight) {
+                    if (window.scrollY >= carouselHeight - 200) {
                         $('#homepage-header').addClass('backdrop-blur-xl');
                         $('#homepage-header').removeClass('backdrop-blur-none ');
                         $('#homepage-header').removeClass('bg-none');
                     }
-                    if (window.scrollY <= carouselHeight) {
-                        $('#homepage-header')
-                            .addClass('bg-none backdrop-blur-none')
-                            .removeClass('backdrop-blur-md');
+                    if (window.scrollY <= carouselHeight - 200) {
+                        $('#homepage-header').addClass('bg-none');
+                        $('#homepage-header').addClass('backdrop-blur-none');
+                        $('#homepage-header').removeClass('backdrop-blur-xl');
                     }
                 });
             });
