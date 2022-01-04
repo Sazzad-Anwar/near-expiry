@@ -209,7 +209,7 @@
                 </div>
             </nav>
         </header>
-        <div class="h-[11.25rem]"></div>
+        <div class="h-[5.938rem] lg:h-[11.25rem]"></div>
 
         <!-- side cart panel -->
         <section
@@ -391,43 +391,558 @@
             </div>
         </section>
 
-        <!-- download the app section -->
-        <section
-            class="mt-14 bg-cover"
-            style="background: url('./src/images/download-section-bg.png') no-repeat center"
-        >
-            <div class="container mx-auto">
-                <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 items-center">
-                    <div class="lg:p-0 py-10">
-                        <h3 class="text-xl font-medium mb-2">Try It Out Today</h3>
-                        <h1 class="text-3xl lg:text-[3.48rem] font-bold text-red-700 mb-5">
-                            Download The App
-                        </h1>
-                        <p class="text-base">
-                            Vestibulum ac est nec eros gravida vulputate ac id tellus. Etiam quis
-                            scelerisque sem dapibus metus. Vivamus at libero risus. Nam eget
-                            ultrices libero. In sed nisi pulvinar, finibus risus placerat, faucibus
-                            turpis. Aenean ac euismod ipsum...
-                        </p>
-                        <div class="my-11 flex flex-row">
-                            <a
-                                href="/"
-                                class="mx-1 hover:shadow-2xl w-[13.3rem] mb-2 sm:mb-2 normal-transition"
-                            >
-                                <img src="./src/images/google-play.png" alt="google-play" />
-                            </a>
-                            <a href="/" class="mx-1 hover:shadow-2xl w-[13.3rem] normal-transition">
-                                <img src="./src/images/apple-play.png" alt="apple-play" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="text-right">
-                        <img src="./src/images/app-1.png" alt="app-1" />
+        <!-- breadcrumb area -->
+        <section class="container mx-auto py-12">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="flex w-full justify-center lg:justify-end">
+                    <h1 class="red-bottom-line text-xl lg:text-3xl font-semibold">
+                        Product Details
+                    </h1>
+                </div>
+                <div class="flex w-full mt-5 lg:mt-0 justify-center lg:justify-end">
+                    <div class="flex items-center">
+                        <a href="homePage.html" class="text-base mx-0.5">Home</a>
+                        <i class="bi bi-chevron-right text-xs font-extrabold mx-0.5"></i>
+                        <a href="homePage.html" class="text-base mx-0.5">Spices</a>
+                        <i class="bi bi-chevron-right text-xs font-extrabold mx-0.5"></i>
+                        <p class="text-base mx-.5 font-semibold text-red-700">Product Details</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- you may also like -->
+        <section class="container mx-auto my-10">
+            <div class="flex flex-col lg:flex-row justify-between items-center mb-5">
+                <h1 class="text-3xl font-semibold red-bottom-line">Ghee</h1>
+                <a href="#" class="text-sm font-medium text-red-700 link-hover mt-10 lg:mt-0 py-2">
+                    View all
+                </a>
+            </div>
+            <div class="product-carousel owl-carousel owl-theme text-center py-5">
+                <div class="item">
+                    <div
+                        class="rounded-lg border border-red-700 p-4 h-[23.375rem] bg-white shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden w-full">
+                            <div class="flex justify-center items-center h-[14.25rem] w-full">
+                                <img
+                                    class="w-auto h-auto hover:scale-110 normal-transition"
+                                    src="./src/images/tea-packet.png"
+                                    alt="market-1"
+                                />
+                            </div>
+                            <p
+                                class="absolute top-0 left-0 bg-yellow-500 rounded-xl flex items-center py -1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <div class="absolute flex items-center top-0 right-0">
+                                <img
+                                    class="rounded-lg rtl:ml-2 mr-2"
+                                    src="./src/images/flag-1.png"
+                                    alt="flag-1"
+                                />
+                                <img
+                                    class="h-5 w-5"
+                                    src="./src/images/love-icon.png"
+                                    alt="flag-1"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <a href="productDetails.html">
+                                <h1 class="text-sm text-left">Brooke Bond Taj Mahal Tea</h1>
+                            </a>
+                            <div class="text-sm text-gray-400">
+                                <div class="flex justify-between items-center">
+                                    <span>100 gm</span>
+
+                                    <!-- tooltip -->
+                                    <span class="cursor-pointer group relative">
+                                        <span class="absolute w-[8.438rem] right-4 -top-1/2">
+                                            <span
+                                                class="relative text-xs border px-2 py-1 rounded-md shadow-lg hidden group-hover:block bg-white text-black"
+                                            >
+                                                Weight of product
+                                            </span>
+                                        </span>
+                                        <img src="./src/images/tooltip-icon.png" alt="tooltip" />
+                                    </span>
+                                </div>
+
+                                <div class="mt-2 flex justify-between items-center">
+                                    <div>
+                                        <p>
+                                            <span class="text-xs mr-1">AED</span>
+                                            <span class="text-xl text-red-700 font-bold">45</span>
+                                        </p>
+                                        <p class="text-xs text-gray-400">
+                                            <span>AED</span>
+                                            <span class="line-through">60</span>
+                                        </p>
+                                    </div>
+                                    <div x-data="{ count: 0, openPrice: false }">
+                                        <div x-show="!openPrice">
+                                            <img
+                                                @click="count++, openPrice = true"
+                                                class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                src="./src/images/increment-icon.png"
+                                                alt="decrement"
+                                            />
+                                        </div>
+
+                                        <div x-show="openPrice">
+                                            <div class="flex items-center">
+                                                <img
+                                                    @click="count > 0 ? count-- : openPrice = false"
+                                                    class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                    src="./src/images/decrement-icon.png"
+                                                    alt="increment"
+                                                />
+                                                <input
+                                                    class="text-base mx-2 text-black focus:outline-none text-center w-4"
+                                                    x-model="count"
+                                                />
+                                                <img
+                                                    @click="count++"
+                                                    class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                    src="./src/images/increment-icon.png"
+                                                    alt="decrement"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div
+                        class="rounded-lg border border-red-700 p-4 h-[23.375rem] bg-white shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden w-full">
+                            <div class="flex justify-center items-center h-[14.25rem] w-full">
+                                <img
+                                    class="w-auto h-auto hover:scale-110 normal-transition"
+                                    src="./src/images/bashmati-rice.png"
+                                    alt="market-1"
+                                />
+                            </div>
+                            <p
+                                class="absolute top-0 left-0 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <div class="absolute flex items-center top-0 right-0">
+                                <img
+                                    class="rounded-lg rtl:ml-2 mr-2"
+                                    src="./src/images/flag-1.png"
+                                    alt="flag-1"
+                                />
+                                <img
+                                    class="h-5 w-5"
+                                    src="./src/images/love-icon.png"
+                                    alt="flag-1"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <a href="productDetails.html">
+                                <h1 class="text-sm text-left">Brooke Bond Taj Mahal Tea</h1>
+                            </a>
+                            <div class="text-sm text-gray-400">
+                                <div class="flex justify-between items-center">
+                                    <span>100 gm</span>
+
+                                    <!-- tooltip -->
+                                    <span class="cursor-pointer group relative">
+                                        <span class="absolute w-[8.438rem] right-4 -top-1/2">
+                                            <span
+                                                class="relative text-xs border px-2 py-1 rounded-md shadow-lg hidden group-hover:block bg-white text-black"
+                                            >
+                                                Weight of product
+                                            </span>
+                                        </span>
+                                        <img src="./src/images/tooltip-icon.png" alt="tooltip" />
+                                    </span>
+                                </div>
+
+                                <div class="mt-2 flex justify-between items-center">
+                                    <div>
+                                        <p>
+                                            <span class="text-xs mr-1">AED</span>
+                                            <span class="text-xl text-red-700 font-bold">45</span>
+                                        </p>
+                                        <p class="text-xs text-gray-400">
+                                            <span>AED</span>
+                                            <span class="line-through">60</span>
+                                        </p>
+                                    </div>
+                                    <div x-data="{ count: 0, openPrice: false }">
+                                        <div x-show="!openPrice">
+                                            <img
+                                                @click="count++, openPrice = true"
+                                                class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                src="./src/images/increment-icon.png"
+                                                alt="decrement"
+                                            />
+                                        </div>
+
+                                        <div x-show="openPrice">
+                                            <div class="flex items-center">
+                                                <img
+                                                    @click="count > 0 ? count-- : openPrice = false"
+                                                    class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                    src="./src/images/decrement-icon.png"
+                                                    alt="increment"
+                                                />
+                                                <input
+                                                    class="text-base mx-2 text-black focus:outline-none text-center w-4"
+                                                    x-model="count"
+                                                />
+                                                <img
+                                                    @click="count++"
+                                                    class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                    src="./src/images/increment-icon.png"
+                                                    alt="decrement"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div
+                        class="rounded-lg border border-red-700 p-4 h-[23.375rem] bg-white shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden w-full">
+                            <div class="flex justify-center items-center h-[14.25rem] w-full">
+                                <img
+                                    class="w-auto h-auto hover:scale-110 normal-transition"
+                                    src="./src/images/butter-chicken.png"
+                                    alt="market-1"
+                                />
+                            </div>
+                            <p
+                                class="absolute top-0 left-0 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <div class="absolute flex items-center top-0 right-0">
+                                <img
+                                    class="rounded-lg rtl:ml-2 mr-2"
+                                    src="./src/images/flag-1.png"
+                                    alt="flag-1"
+                                />
+                                <img
+                                    class="h-5 w-5"
+                                    src="./src/images/love-icon.png"
+                                    alt="flag-1"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <a href="productDetails.html">
+                                <h1 class="text-sm text-left">Brooke Bond Taj Mahal Tea</h1>
+                            </a>
+                            <div class="text-sm text-gray-400">
+                                <div class="flex justify-between items-center">
+                                    <span>100 gm</span>
+
+                                    <!-- tooltip -->
+                                    <span class="cursor-pointer group relative">
+                                        <span class="absolute w-[8.438rem] right-4 -top-1/2">
+                                            <span
+                                                class="relative text-xs border px-2 py-1 rounded-md shadow-lg hidden group-hover:block bg-white text-black"
+                                            >
+                                                Weight of product
+                                            </span>
+                                        </span>
+                                        <img src="./src/images/tooltip-icon.png" alt="tooltip" />
+                                    </span>
+                                </div>
+
+                                <div class="mt-2 flex justify-between items-center">
+                                    <div>
+                                        <p>
+                                            <span class="text-xs mr-1">AED</span>
+                                            <span class="text-xl text-red-700 font-bold">45</span>
+                                        </p>
+                                        <p class="text-xs text-gray-400">
+                                            <span>AED</span>
+                                            <span class="line-through">60</span>
+                                        </p>
+                                    </div>
+                                    <div x-data="{ count: 0, openPrice: false }">
+                                        <div x-show="!openPrice">
+                                            <img
+                                                @click="count++, openPrice = true"
+                                                class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                src="./src/images/increment-icon.png"
+                                                alt="decrement"
+                                            />
+                                        </div>
+
+                                        <div x-show="openPrice">
+                                            <div class="flex items-center">
+                                                <img
+                                                    @click="count > 0 ? count-- : openPrice = false"
+                                                    class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                    src="./src/images/decrement-icon.png"
+                                                    alt="increment"
+                                                />
+                                                <input
+                                                    class="text-base mx-2 text-black focus:outline-none text-center w-4"
+                                                    x-model="count"
+                                                />
+                                                <img
+                                                    @click="count++"
+                                                    class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                    src="./src/images/increment-icon.png"
+                                                    alt="decrement"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div
+                        class="rounded-lg border border-red-700 p-4 h-[23.375rem] bg-white shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden w-full">
+                            <div class="flex justify-center items-center h-[14.25rem] w-full">
+                                <img
+                                    class="w-auto h-auto hover:scale-110 normal-transition"
+                                    src="./src/images/mtr-powder.png"
+                                    alt="market-1"
+                                />
+                            </div>
+                            <p
+                                class="absolute top-0 left-0 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <div class="absolute flex items-center top-0 right-0">
+                                <img
+                                    class="rounded-lg rtl:ml-2 mr-2"
+                                    src="./src/images/flag-1.png"
+                                    alt="flag-1"
+                                />
+                                <img
+                                    class="h-5 w-5"
+                                    src="./src/images/love-icon.png"
+                                    alt="flag-1"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <a href="productDetails.html">
+                                <h1 class="text-sm text-left">Brooke Bond Taj Mahal Tea</h1>
+                            </a>
+                            <div class="text-sm text-gray-400">
+                                <div class="flex justify-between items-center">
+                                    <span>100 gm</span>
+
+                                    <!-- tooltip -->
+                                    <span class="cursor-pointer group relative">
+                                        <span class="absolute w-[8.438rem] right-4 -top-1/2">
+                                            <span
+                                                class="relative text-xs border px-2 py-1 rounded-md shadow-lg hidden group-hover:block bg-white text-black"
+                                            >
+                                                Weight of product
+                                            </span>
+                                        </span>
+                                        <img src="./src/images/tooltip-icon.png" alt="tooltip" />
+                                    </span>
+                                </div>
+
+                                <div class="mt-2 flex justify-between items-center">
+                                    <div>
+                                        <p>
+                                            <span class="text-xs mr-1">AED</span>
+                                            <span class="text-xl text-red-700 font-bold">45</span>
+                                        </p>
+                                        <p class="text-xs text-gray-400">
+                                            <span>AED</span>
+                                            <span class="line-through">60</span>
+                                        </p>
+                                    </div>
+                                    <div x-data="{ count: 0, openPrice: false }">
+                                        <div x-show="!openPrice">
+                                            <img
+                                                @click="count++, openPrice = true"
+                                                class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                src="./src/images/increment-icon.png"
+                                                alt="decrement"
+                                            />
+                                        </div>
+
+                                        <div x-show="openPrice">
+                                            <div class="flex items-center">
+                                                <img
+                                                    @click="count > 0 ? count-- : openPrice = false"
+                                                    class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                    src="./src/images/decrement-icon.png"
+                                                    alt="increment"
+                                                />
+                                                <input
+                                                    class="text-base mx-2 text-black focus:outline-none text-center w-4"
+                                                    x-model="count"
+                                                />
+                                                <img
+                                                    @click="count++"
+                                                    class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                    src="./src/images/increment-icon.png"
+                                                    alt="decrement"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div
+                        class="rounded-lg border border-red-700 p-4 h-[23.375rem] bg-white shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden w-full">
+                            <div class="flex justify-center items-center h-[14.25rem] w-full">
+                                <img
+                                    class="w-auto h-auto hover:scale-110 normal-transition"
+                                    src="./src/images/ghee.png"
+                                    alt="market-1"
+                                />
+                            </div>
+                            <p
+                                class="absolute top-0 left-0 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <div class="absolute flex items-center top-0 right-0">
+                                <img
+                                    class="rounded-lg rtl:ml-2 mr-2"
+                                    src="./src/images/flag-1.png"
+                                    alt="flag-1"
+                                />
+                                <img
+                                    class="h-5 w-5"
+                                    src="./src/images/love-icon.png"
+                                    alt="flag-1"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <a href="productDetails.html">
+                                <h1 class="text-sm text-left">Brooke Bond Taj Mahal Tea</h1>
+                            </a>
+                            <div class="text-sm text-gray-400">
+                                <div class="flex justify-between items-center">
+                                    <span>100 gm</span>
+
+                                    <!-- tooltip -->
+                                    <span class="cursor-pointer group relative">
+                                        <span class="absolute w-[8.438rem] right-4 -top-1/2">
+                                            <span
+                                                class="relative text-xs border px-2 py-1 rounded-md shadow-lg hidden group-hover:block bg-white text-black"
+                                            >
+                                                Weight of product
+                                            </span>
+                                        </span>
+                                        <img src="./src/images/tooltip-icon.png" alt="tooltip" />
+                                    </span>
+                                </div>
+
+                                <div class="mt-2 flex justify-between items-center">
+                                    <div>
+                                        <p>
+                                            <span class="text-xs mr-1">AED</span>
+                                            <span class="text-xl text-red-700 font-bold">45</span>
+                                        </p>
+                                        <p class="text-xs text-gray-400">
+                                            <span>AED</span>
+                                            <span class="line-through">60</span>
+                                        </p>
+                                    </div>
+                                    <div x-data="{ count: 0, openPrice: false }">
+                                        <div x-show="!openPrice">
+                                            <img
+                                                @click="count++, openPrice = true"
+                                                class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                src="./src/images/increment-icon.png"
+                                                alt="decrement"
+                                            />
+                                        </div>
+
+                                        <div x-show="openPrice">
+                                            <div class="flex items-center">
+                                                <img
+                                                    @click="count > 0 ? count-- : openPrice = false"
+                                                    class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                    src="./src/images/decrement-icon.png"
+                                                    alt="increment"
+                                                />
+                                                <input
+                                                    class="text-base mx-2 text-black focus:outline-none text-center w-4"
+                                                    x-model="count"
+                                                />
+                                                <img
+                                                    @click="count++"
+                                                    class="cursor-pointer hover:shadow-lg shadow normal-transition"
+                                                    src="./src/images/increment-icon.png"
+                                                    alt="decrement"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
         <footer>
             <section
                 class="bg-cover"
@@ -438,7 +953,7 @@
                         <div class="grid grid-cols-1 xl:grid-cols-5 gap-4">
                             <div>
                                 <h3
-                                    class="text-3xl text-white black-bottom-line-start font-semibold"
+                                    class="text-[1.75rem] text-white black-bottom-line-start font-semibold"
                                 >
                                     Quick Links
                                 </h3>
@@ -496,7 +1011,7 @@
 
                             <div>
                                 <h3
-                                    class="text-3xl text-white black-bottom-line-start font-semibold"
+                                    class="text-[1.75rem] text-white black-bottom-line-start font-semibold"
                                 >
                                     Popular Categories
                                 </h3>
@@ -572,7 +1087,7 @@
 
                             <div>
                                 <h3
-                                    class="text-3xl text-white black-bottom-line-start font-semibold"
+                                    class="text-[1.75rem] text-white black-bottom-line-start font-semibold"
                                 >
                                     Popular Stores
                                 </h3>
@@ -638,7 +1153,7 @@
 
                             <div>
                                 <h3
-                                    class="text-3xl text-white black-bottom-line-start font-semibold"
+                                    class="text-[1.75rem] text-white black-bottom-line-start font-semibold"
                                 >
                                     Important Links
                                 </h3>
@@ -719,7 +1234,7 @@
 
                             <div>
                                 <h3
-                                    class="text-3xl text-white black-bottom-line-start font-semibold"
+                                    class="text-[1.75rem] text-white black-bottom-line-start font-semibold"
                                 >
                                     Contact Info
                                 </h3>
@@ -841,5 +1356,41 @@
                 </div>
             </section>
         </footer>
+
+        <script>
+            $('.product-carousel').owlCarousel({
+                dots: false,
+                loop: true,
+                margin: 10,
+                stagePadding: 10,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                rtl: document.querySelector('html').dir === 'rtl' ? true : false,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    640: {
+                        items: 2,
+                    },
+                    768: {
+                        items: 2,
+                    },
+                    1024: {
+                        items: 3,
+                    },
+                    1199: {
+                        items: 3,
+                    },
+                    1200: {
+                        items: 4,
+                    },
+                    1500: {
+                        items: 5,
+                    },
+                },
+            });
+        </script>
     </body>
 </html>
