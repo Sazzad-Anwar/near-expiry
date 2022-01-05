@@ -14,7 +14,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
 
-        <title>Near Expiry | Login</title>
+        <title>Near Expiry | Home</title>
     </head>
     <body
         x-data="{navOpen:false,cartOpen:false}"
@@ -384,89 +384,513 @@
             </div>
         </section>
 
-        <!-- login area -->
-        <section class="my-14">
-            <div class="container mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 shadow-lg border rounded-xl">
-                    <div class="h-full w-full hidden lg:block">
-                        <img
-                            class="h-full w-full"
-                            src="./src/images/login-side-img.png"
-                            alt="login-side-img"
-                        />
+        <!-- breadcrumb area -->
+        <section class="container mx-auto py-12">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="flex w-full justify-center lg:justify-end">
+                    <h1 class="red-bottom-line text-xl lg:text-3xl font-semibold">
+                        Choose Supermarket
+                    </h1>
+                </div>
+                <div class="flex w-full mt-5 lg:mt-0 justify-center lg:justify-end">
+                    <div class="flex items-center">
+                        <a href="homePage.html" class="text-base mx-0.5">Home</a>
+                        <i class="bi bi-chevron-right text-xs font-extrabold mx-0.5"></i>
+                        <a href="homePage.html" class="text-base mx-0.5 font-semibold text-red-700">
+                            Choose Supermarket
+                        </a>
                     </div>
-                    <div class="flex justify-center items-center">
-                        <div class="py-7 lg:py-0">
-                            <h1 class="text-3xl font-semibold red-bottom-line text-center">
-                                Login
-                            </h1>
-                            <p class="text-sm mt-7 text-center">
-                                Please Login Below Account Detail
+                </div>
+            </div>
+        </section>
+
+        <!-- supermarket area -->
+        <section class="my-12">
+            <div class="container mx-auto">
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-8"
+                >
+                    <div
+                        class="w-96 mx-auto sm:w-full md:w-full lg:w-full lg:h-[19.25rem] rounded-xl bg-white p-5 border shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden">
+                            <img
+                                class="w-full h-52 hover:scale-110 normal-transition"
+                                src="./src/images/market-1.png"
+                                alt="market-1"
+                            />
+                            <p
+                                class="absolute top-4 left-4 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
                             </p>
-                            <form class="mt-11 w-auto lg:w-[30.938rem]">
-                                <div class="my-3">
-                                    <label for="email" class="text-base mb-2 block">Email:</label>
-                                    <input
-                                        type="text"
-                                        id="email"
-                                        class="py-4 px-6 border rounded-lg text-gray-400 focus:outline-none w-full"
-                                        placeholder="admin@royex.net"
-                                    />
-                                </div>
-                                <div class="my-3">
-                                    <label for="email" class="text-base mb-2 block">
-                                        Password:
-                                    </label>
-                                    <input
-                                        type="password"
-                                        id="email"
-                                        class="py-4 px-6 border rounded-lg text-gray-400 focus:outline-none w-full"
-                                        placeholder="Input password"
-                                    />
-                                </div>
-                                <div class="my-3 flex justify-between items-center">
-                                    <label
-                                        for="remember"
-                                        class="text-xs text-gray-400 cursor-pointer flex items-center"
-                                    >
-                                        <input
-                                            type="checkbox"
-                                            id="remember"
-                                            class="mr-2 rtl:ml-2 rounded-lg accent-red-700"
-                                        />
-                                        Remember Me
-                                    </label>
+                            <img
+                                class="absolute top-4 right-4 rounded-lg"
+                                src="./src/images/flag-1.png"
+                                alt="flag-1"
+                            />
+                        </div>
+                        <h1 class="text-2xl font-semibold">Lebanese Bakery</h1>
+                        <div class="flex items-center">
+                            <img
+                                class="mr-2 rtl:ml-2"
+                                src="./src/images/location-black-2.png"
+                                alt="location"
+                            />
+                            <p class="text-sm text-gray-600">Lebanese</p>
+                        </div>
+                    </div>
 
-                                    <a href="forgotPassword.html" class="text-xs">
-                                        Forget Password?
-                                    </a>
-                                </div>
+                    <div
+                        class="w-96 mx-auto sm:w-full md:w-full lg:w-full lg:h-[19.25rem] rounded-xl bg-white p-5 border shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden">
+                            <img
+                                class="w-full h-52 hover:scale-110 normal-transition"
+                                src="./src/images/market-2.png"
+                                alt="market-1"
+                            />
+                            <p
+                                class="absolute top-4 left-4 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <img
+                                class="absolute top-4 right-4 rounded-lg"
+                                src="./src/images/flag-2.png"
+                                alt="flag-1"
+                            />
+                        </div>
+                        <h1 class="text-2xl font-semibold">Lebanese Bakery</h1>
+                        <div class="flex items-center">
+                            <img
+                                class="mr-2 rtl:ml-2"
+                                src="./src/images/location-black-2.png"
+                                alt="location"
+                            />
+                            <p class="text-sm text-gray-600">Lebanese</p>
+                        </div>
+                    </div>
 
-                                <div
-                                    class="mt-10 flex flex-col lg:flex-row justify-between items-center"
-                                >
-                                    <button
-                                        type="submit"
-                                        class="py-5 px-16 border rounded-lg bg-red-700 text-white hover:shadow-xl normal-transition"
-                                    >
-                                        Submit
-                                    </button>
-                                    <div
-                                        class="text-sm flex flex-col lg:flex-row items-center mt-3 lg:mt-0"
-                                    >
-                                        <p>Don’t Have an Account?</p>
-                                        <a
-                                            href="registration.html"
-                                            class="text-lg font-semibold ml-2 rtl:mr-2"
-                                        >
-                                            Registration
-                                        </a>
-                                    </div>
-                                </div>
-                            </form>
+                    <div
+                        class="w-96 mx-auto sm:w-full md:w-full lg:w-full lg:h-[19.25rem] rounded-xl bg-white p-5 border shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden">
+                            <img
+                                class="w-full h-52 hover:scale-110 normal-transition"
+                                src="./src/images/market-3.png"
+                                alt="market-1"
+                            />
+                            <p
+                                class="absolute top-4 left-4 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <img
+                                class="absolute top-4 right-4 rounded-lg"
+                                src="./src/images/flag-3.png"
+                                alt="flag-1"
+                            />
+                        </div>
+                        <h1 class="text-2xl font-semibold">Lebanese Bakery</h1>
+                        <div class="flex items-center">
+                            <img
+                                class="mr-2 rtl:ml-2"
+                                src="./src/images/location-black-2.png"
+                                alt="location"
+                            />
+                            <p class="text-sm text-gray-600">Lebanese</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-96 mx-auto sm:w-full md:w-full lg:w-full lg:h-[19.25rem] rounded-xl bg-white p-5 border shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden">
+                            <img
+                                class="w-full h-52 hover:scale-110 normal-transition"
+                                src="./src/images/market-4.png"
+                                alt="market-1"
+                            />
+                            <p
+                                class="absolute top-4 left-4 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <img
+                                class="absolute top-4 right-4 rounded-lg"
+                                src="./src/images/flag-4.png"
+                                alt="flag-1"
+                            />
+                        </div>
+                        <h1 class="text-2xl font-semibold">Lebanese Bakery</h1>
+                        <div class="flex items-center">
+                            <img
+                                class="mr-2 rtl:ml-2"
+                                src="./src/images/location-black-2.png"
+                                alt="location"
+                            />
+                            <p class="text-sm text-gray-600">Lebanese</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-96 mx-auto sm:w-full md:w-full lg:w-full lg:h-[19.25rem] rounded-xl bg-white p-5 border shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden">
+                            <img
+                                class="w-full h-52 hover:scale-110 normal-transition"
+                                src="./src/images/market-5.png"
+                                alt="market-1"
+                            />
+                            <p
+                                class="absolute top-4 left-4 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <img
+                                class="absolute top-4 right-4 rounded-lg"
+                                src="./src/images/flag-1.png"
+                                alt="flag-1"
+                            />
+                        </div>
+                        <h1 class="text-2xl font-semibold">Lebanese Bakery</h1>
+                        <div class="flex items-center">
+                            <img
+                                class="mr-2 rtl:ml-2"
+                                src="./src/images/location-black-2.png"
+                                alt="location"
+                            />
+                            <p class="text-sm text-gray-600">Lebanese</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-96 mx-auto sm:w-full md:w-full lg:w-full lg:h-[19.25rem] rounded-xl bg-white p-5 border shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden">
+                            <img
+                                class="w-full h-52 hover:scale-110 normal-transition"
+                                src="./src/images/market-6.png"
+                                alt="market-1"
+                            />
+                            <p
+                                class="absolute top-4 left-4 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <img
+                                class="absolute top-4 right-4 rounded-lg"
+                                src="./src/images/flag-2.png"
+                                alt="flag-1"
+                            />
+                        </div>
+                        <h1 class="text-2xl font-semibold">Lebanese Bakery</h1>
+                        <div class="flex items-center">
+                            <img
+                                class="mr-2 rtl:ml-2"
+                                src="./src/images/location-black-2.png"
+                                alt="location"
+                            />
+                            <p class="text-sm text-gray-600">Lebanese</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-96 mx-auto sm:w-full md:w-full lg:w-full lg:h-[19.25rem] rounded-xl bg-white p-5 border shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden">
+                            <img
+                                class="w-full h-52 hover:scale-110 normal-transition"
+                                src="./src/images/market-7.png"
+                                alt="market-1"
+                            />
+                            <p
+                                class="absolute top-4 left-4 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <img
+                                class="absolute top-4 right-4 rounded-lg"
+                                src="./src/images/flag-3.png"
+                                alt="flag-1"
+                            />
+                        </div>
+                        <h1 class="text-2xl font-semibold">Lebanese Bakery</h1>
+                        <div class="flex items-center">
+                            <img
+                                class="mr-2 rtl:ml-2"
+                                src="./src/images/location-black-2.png"
+                                alt="location"
+                            />
+                            <p class="text-sm text-gray-600">Lebanese</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-96 mx-auto sm:w-full md:w-full lg:w-full lg:h-[19.25rem] rounded-xl bg-white p-5 border shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden">
+                            <img
+                                class="w-full h-52 hover:scale-110 normal-transition"
+                                src="./src/images/market-8.png"
+                                alt="market-1"
+                            />
+                            <p
+                                class="absolute top-4 left-4 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <img
+                                class="absolute top-4 right-4 rounded-lg"
+                                src="./src/images/flag-4.png"
+                                alt="flag-1"
+                            />
+                        </div>
+                        <h1 class="text-2xl font-semibold">Lebanese Bakery</h1>
+                        <div class="flex items-center">
+                            <img
+                                class="mr-2 rtl:ml-2"
+                                src="./src/images/location-black-2.png"
+                                alt="location"
+                            />
+                            <p class="text-sm text-gray-600">Lebanese</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-96 mx-auto sm:w-full md:w-full lg:w-full lg:h-[19.25rem] rounded-xl bg-white p-5 border shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden">
+                            <img
+                                class="w-full h-52 hover:scale-110 normal-transition"
+                                src="./src/images/market-5.png"
+                                alt="market-1"
+                            />
+                            <p
+                                class="absolute top-4 left-4 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <img
+                                class="absolute top-4 right-4 rounded-lg"
+                                src="./src/images/flag-1.png"
+                                alt="flag-1"
+                            />
+                        </div>
+                        <h1 class="text-2xl font-semibold">Lebanese Bakery</h1>
+                        <div class="flex items-center">
+                            <img
+                                class="mr-2 rtl:ml-2"
+                                src="./src/images/location-black-2.png"
+                                alt="location"
+                            />
+                            <p class="text-sm text-gray-600">Lebanese</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-96 mx-auto sm:w-full md:w-full lg:w-full lg:h-[19.25rem] rounded-xl bg-white p-5 border shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden">
+                            <img
+                                class="w-full h-52 hover:scale-110 normal-transition"
+                                src="./src/images/market-6.png"
+                                alt="market-1"
+                            />
+                            <p
+                                class="absolute top-4 left-4 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <img
+                                class="absolute top-4 right-4 rounded-lg"
+                                src="./src/images/flag-2.png"
+                                alt="flag-1"
+                            />
+                        </div>
+                        <h1 class="text-2xl font-semibold">Lebanese Bakery</h1>
+                        <div class="flex items-center">
+                            <img
+                                class="mr-2 rtl:ml-2"
+                                src="./src/images/location-black-2.png"
+                                alt="location"
+                            />
+                            <p class="text-sm text-gray-600">Lebanese</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-96 mx-auto sm:w-full md:w-full lg:w-full lg:h-[19.25rem] rounded-xl bg-white p-5 border shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden">
+                            <img
+                                class="w-full h-52 hover:scale-110 normal-transition"
+                                src="./src/images/market-7.png"
+                                alt="market-1"
+                            />
+                            <p
+                                class="absolute top-4 left-4 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <img
+                                class="absolute top-4 right-4 rounded-lg"
+                                src="./src/images/flag-3.png"
+                                alt="flag-1"
+                            />
+                        </div>
+                        <h1 class="text-2xl font-semibold">Lebanese Bakery</h1>
+                        <div class="flex items-center">
+                            <img
+                                class="mr-2 rtl:ml-2"
+                                src="./src/images/location-black-2.png"
+                                alt="location"
+                            />
+                            <p class="text-sm text-gray-600">Lebanese</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="w-96 mx-auto sm:w-full md:w-full lg:w-full lg:h-[19.25rem] rounded-xl bg-white p-5 border shadow-lg"
+                    >
+                        <div class="relative rounded-xl mb-3 overflow-hidden">
+                            <img
+                                class="w-full h-52 hover:scale-110 normal-transition"
+                                src="./src/images/market-8.png"
+                                alt="market-1"
+                            />
+                            <p
+                                class="absolute top-4 left-4 bg-yellow-500 rounded-xl flex items-center py-1 px-3"
+                            >
+                                <img
+                                    class="mr-1 rtl:ml-1"
+                                    src="./src/images/star-icon.png"
+                                    alt="star-icon"
+                                />
+                                <span class="text-xs font-medium text-white">4.8</span>
+                            </p>
+                            <img
+                                class="absolute top-4 right-4 rounded-lg"
+                                src="./src/images/flag-4.png"
+                                alt="flag-1"
+                            />
+                        </div>
+                        <h1 class="text-2xl font-semibold">Lebanese Bakery</h1>
+                        <div class="flex items-center">
+                            <img
+                                class="mr-2 rtl:ml-2"
+                                src="./src/images/location-black-2.png"
+                                alt="location"
+                            />
+                            <p class="text-sm text-gray-600">Lebanese</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- pagination -->
+                <!-- for active page add the class 'bg-primary text-white' -->
+                <section class="flex justify-center w-full mt-14">
+                    <div class="flex items-center">
+                        <a
+                            href="#"
+                            class="mx-1 lg:mx-2 rounded-full px-3 py-2 hover:bg-red-700 hover:text-white transition duration-300 ease-in-out"
+                        >
+                            <i class="bi bi-chevron-left text-xl"></i>
+                        </a>
+                        <a
+                            href="#"
+                            class="mx-1 lg:mx-2 rounded-full px-4 py-2 hover:bg-red-700 hover:text-white transition duration-300 ease-in-out"
+                        >
+                            1
+                        </a>
+                        <a
+                            href="#"
+                            class="mx-1 lg:mx-2 rounded-full px-4 py-2 bg-red-700 text-white hover:bg-red-700 hover:text-white transition duration-300 ease-in-out"
+                        >
+                            2
+                        </a>
+                        <a
+                            href="#"
+                            class="mx-1 lg:mx-2 rounded-full px-4 py-2 hover:bg-red-700 hover:text-white transition duration-300 ease-in-out"
+                        >
+                            3
+                        </a>
+                        <a
+                            href="#"
+                            class="mx-1 lg:mx-2 rounded-full px-4 py-2 hover:bg-red-700 hover:text-white transition duration-300 ease-in-out"
+                        >
+                            4
+                        </a>
+                        <a
+                            href="#"
+                            class="mx-1 lg:mx-2 rounded-full px-4 py-2 hover:bg-red-700 hover:text-white transition duration-300 ease-in-out"
+                        >
+                            5
+                        </a>
+                        <a
+                            href="#"
+                            class="mx-1 lg:mx-2 rounded-full px-3 py-2 hover:bg-red-700 hover:text-white transition duration-300 ease-in-out"
+                        >
+                            <i class="bi bi-chevron-right text-xl"></i>
+                        </a>
+                    </div>
+                </section>
             </div>
         </section>
 

@@ -39,8 +39,8 @@
                             />
                         </a>
                         <i
-                            x-on:click="navOpen = !navOpen"
-                            x-bind:cl[6.4rem]"!nauto'bi bi-list text-4xl mr-4 block lg:hidden cursor-pointer text-white normal-transition':'bi bi-x-lg text-4xl block lg:hidden cursor-pointer text-white normal-transition'"
+                            @click="navOpen = !navOpen"
+                            x-bind:class="!navOpen ? 'bi bi-list text-4xl mr-4 block lg:hidden cursor-pointer text-white normal-transition':'bi bi-x-lg text-4xl block lg:hidden cursor-pointer text-white normal-transition'"
                         ></i>
                     </div>
                     <ul
@@ -85,7 +85,7 @@
                             class="py-2 lg:py-0 lg:px-2 xl:px-5 lg:text-xs xl:text-lg font-medium group"
                         >
                             <a
-                                href="homPage.html"
+                                href="shop.html"
                                 class="nav-hover border-b border-transparent py-2 text-white"
                             >
                                 Shop
@@ -95,7 +95,7 @@
                             class="py-2 lg:py-0 lg:px-2 xl:px-5 lg:text-xs xl:text-lg font-medium group"
                         >
                             <a
-                                href="homPage.html"
+                                href="category.html"
                                 class="nav-hover border-b border-transparent py-2 text-white"
                             >
                                 Category
@@ -105,7 +105,7 @@
                             class="py-2 lg:py-0 lg:px-2 xl:px-5 lg:text-xs xl:text-lg font-medium group"
                         >
                             <a
-                                href="homPage.html"
+                                href="contact.html"
                                 class="nav-hover border-b border-transparent py-2 text-white"
                             >
                                 Contact
@@ -191,8 +191,8 @@
                             </ul>
                         </li>
                         <li
-                            x-on:click="cartOpen = !cartOpen"
-                            class="py[6.4rem]g:pauto-5 text-lg cursor-pointer"
+                            @click="cartOpen = !cartOpen"
+                            class="py-2 lg:py-0 lg:px-5 text-lg cursor-pointer"
                         >
                             <div class="border-transparent text-white">
                                 <img class="h-6 w-6" src="./src/images/cart-icon.png" alt="cart" />
@@ -226,7 +226,9 @@
                         </h1>
                     </div>
                     <button x-on:click="cartOpen = !cartOpen" class="cursor-pointer h-12 w-12">
-                        <im[6.4rem]   auto         class="cursor-pointer h-full w-full"
+                        <im[6.4rem]
+                            auto
+                            class="cursor-pointer h-full w-full"
                             src="./src/images/close.png"
                             alt="close"
                         />
@@ -651,19 +653,13 @@
                                 </a>
                             </div>
                             <hr class="border-gray-400 w-full mt-8" />
-                            <ul class="list-none my-6" style="column-count: 2;">
+                            <ul class="list-none my-6" style="column-count: 2">
+                                <li class="mb-2 text-base font-medium"><b>Brand:</b> MDH</li>
                                 <li class="mb-2 text-base font-medium">
-                                    <b>Brand:</b>  MDH
+                                    <b>Item Weight:</b> 100 Grams
                                 </li>
-                                <li class="mb-2 text-base font-medium">
-                                   <b>Item Weight:</b> 100 Grams
-                                </li>
-                                <li class="mb-2 text-base font-medium">
-                                    <b>Item For:</b> Chicken
-                                </li>
-                                <li class="mb-2 text-base font-medium">
-                                    <b>Type:</b> Spicy
-                                </li>
+                                <li class="mb-2 text-base font-medium"><b>Item For:</b> Chicken</li>
+                                <li class="mb-2 text-base font-medium"><b>Type:</b> Spicy</li>
                                 <li class="mb-2 text-base font-medium">
                                     <b>Package Weight:</b> 0.12 Kilograms
                                 </li>
@@ -672,24 +668,42 @@
 
                             <div class="mt-6 border border-gray-400 rounded-xl py-4 px-5 w-11/12">
                                 <div class="grid grid-cols-1 lg:grid-cols-3 items-center">
-                                    <div class="flex my-2 lg:my-0 items-center lg:border-r lg:border-gray-400">
-                                        <img class="mr-2 rtl:ml-2" src="./src/images/delivery-icon.png" alt="delivery">
+                                    <div
+                                        class="flex my-2 lg:my-0 items-center lg:border-r lg:border-gray-400"
+                                    >
+                                        <img
+                                            class="mr-2 rtl:ml-2"
+                                            src="./src/images/delivery-icon.png"
+                                            alt="delivery"
+                                        />
                                         <div>
                                             <h1 class="text-xl font-semibold">Free Delivery</h1>
-                                            <p class="text-xs text-gray-400">For All Orders Over AED 10,000</p>
+                                            <p class="text-xs text-gray-400">
+                                                For All Orders Over AED 10,000
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="flex my-2 lg:my-0 items-center lg:border-r lg:border-gray-400 justify-start lg:justify-center">
-                                        <img class="mr-2 rtl:ml-2" src="./src/images/secure-pay-icon.png" alt="secure-pay">
+                                    <div
+                                        class="flex my-2 lg:my-0 items-center lg:border-r lg:border-gray-400 justify-start lg:justify-center"
+                                    >
+                                        <img
+                                            class="mr-2 rtl:ml-2"
+                                            src="./src/images/secure-pay-icon.png"
+                                            alt="secure-pay"
+                                        />
                                         <div>
-                                            <h1 class="text-xl font-semibold">
-                                                Secure Payment
-                                            </h1>
+                                            <h1 class="text-xl font-semibold">Secure Payment</h1>
                                             <p class="text-xs text-gray-400">100% Secure Payment</p>
                                         </div>
                                     </div>
-                                    <div class="flex my-2 lg:my-0 items-center justify-start lg:justify-center">
-                                        <img class="mr-2 rtl:ml-2" src="./src/images/support-icon.png" alt="support">
+                                    <div
+                                        class="flex my-2 lg:my-0 items-center justify-start lg:justify-center"
+                                    >
+                                        <img
+                                            class="mr-2 rtl:ml-2"
+                                            src="./src/images/support-icon.png"
+                                            alt="support"
+                                        />
                                         <div>
                                             <h1 class="text-xl font-semibold">24/7 Support</h1>
                                             <p class="text-xs text-gray-400">Dedicated Support</p>
@@ -703,42 +717,102 @@
 
                 <div x-data="{ tabOpen:'description' }" class="my-14">
                     <div class="flex items-center">
-                        <h1 x-on:click="tabOpen = 'description'" x-bind:class="tabOpen === 'description' ? 'text-xl text-red-700 py-3 cursor-pointer mx-5 font-semibold border-b-2 border-red-700':'text-xl py-3 cursor-pointer mx-5 font-semibold border-b-2 border-transparent'">Description</h1>
-                        <h1 x-on:click="tabOpen = 'rating'" x-bind:class="tabOpen === 'rating' ? 'text-xl text-red-700 py-3 cursor-pointer mx-5 font-semibold border-b-2 border-red-700':'text-xl py-3 cursor-pointer mx-5 font-semibold border-b-2 border-transparent'">Rating And Review</h1>
+                        <h1
+                            x-on:click="tabOpen = 'description'"
+                            x-bind:class="tabOpen === 'description' ? 'text-xl text-red-700 py-3 cursor-pointer mx-5 font-semibold border-b-2 border-red-700':'text-xl py-3 cursor-pointer mx-5 font-semibold border-b-2 border-transparent'"
+                        >
+                            Description
+                        </h1>
+                        <h1
+                            x-on:click="tabOpen = 'rating'"
+                            x-bind:class="tabOpen === 'rating' ? 'text-xl text-red-700 py-3 cursor-pointer mx-5 font-semibold border-b-2 border-red-700':'text-xl py-3 cursor-pointer mx-5 font-semibold border-b-2 border-transparent'"
+                        >
+                            Rating And Review
+                        </h1>
                     </div>
                     <div class="border rounded-lg p-7 h-auto lg:h-min-48">
-                        <p x-show="tabOpen === 'description'" x-transition >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras augue turpis, viverra et vulputate vel, egestas egestas sapien. Aliquam imperdiet ipsum convallis varius faucibus. Ut dictum dui nibh, nec vulputate enim laoreet pellentesque. Suspendisse ornare, dui nec bibendum ullamcorper, orci ligula semper turpis, sed lacinia velit mauris sit amet mi. Vestibulum rhoncus erat nunc. Aenean tempor sollicitudin neque, in rhoncus lacus iaculis in. Donec at ipsum condimentum, maximus turpis vel, ultricies massa. Phasellus rhoncus sed nunc eget porttitor. Nunc fringilla sit amet nunc ac malesuada. Nunc aliquet nulla eu accumsan sodales. Cras id consequat diam. In ultricies lorem non velit sagittis, sit amet auctor urna hendrerit. Aliquam dignissim porttitor tellus ac accumsan.
-
-                            Pellentesque non fringilla ante. Morbi in porta purus, tristique vulputate tortor. Nunc placerat congue arcu, a fringilla ligula auctor ac. Maecenas quis laoreet tellus. Nunc eleifend eget leo cursus tincidunt. Aliquam lorem leo, maximus nec mauris sit amet, ullamcorper molestie neque. Mauris interdum metus a venenatis semper. In posuere, sapien non tempus eleifend, magna purus sodales sem, at ultricies diam velit eu justo. Quisque ultrices sed ligula porttitor tincidunt. Pellentesque viverra ligula odio, eget faucibus neque sodales vel. Aliquam sagittis diam lectus, congue egestas ipsum imperdiet sit amet.
+                        <p x-show="tabOpen === 'description'" x-transition>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras augue
+                            turpis, viverra et vulputate vel, egestas egestas sapien. Aliquam
+                            imperdiet ipsum convallis varius faucibus. Ut dictum dui nibh, nec
+                            vulputate enim laoreet pellentesque. Suspendisse ornare, dui nec
+                            bibendum ullamcorper, orci ligula semper turpis, sed lacinia velit
+                            mauris sit amet mi. Vestibulum rhoncus erat nunc. Aenean tempor
+                            sollicitudin neque, in rhoncus lacus iaculis in. Donec at ipsum
+                            condimentum, maximus turpis vel, ultricies massa. Phasellus rhoncus sed
+                            nunc eget porttitor. Nunc fringilla sit amet nunc ac malesuada. Nunc
+                            aliquet nulla eu accumsan sodales. Cras id consequat diam. In ultricies
+                            lorem non velit sagittis, sit amet auctor urna hendrerit. Aliquam
+                            dignissim porttitor tellus ac accumsan. Pellentesque non fringilla ante.
+                            Morbi in porta purus, tristique vulputate tortor. Nunc placerat congue
+                            arcu, a fringilla ligula auctor ac. Maecenas quis laoreet tellus. Nunc
+                            eleifend eget leo cursus tincidunt. Aliquam lorem leo, maximus nec
+                            mauris sit amet, ullamcorper molestie neque. Mauris interdum metus a
+                            venenatis semper. In posuere, sapien non tempus eleifend, magna purus
+                            sodales sem, at ultricies diam velit eu justo. Quisque ultrices sed
+                            ligula porttitor tincidunt. Pellentesque viverra ligula odio, eget
+                            faucibus neque sodales vel. Aliquam sagittis diam lectus, congue egestas
+                            ipsum imperdiet sit amet.
                         </p>
-                        <div x-show="tabOpen === 'rating'" x-transition >
+                        <div x-show="tabOpen === 'rating'" x-transition>
                             <div class="mb-8 pb-8 border-b border-gray-300">
                                 <h1 class="text-xl font-semibold mb-2">Good Product</h1>
-                                <h4 class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras augue turpis, viverra et vulputate vel, egestas egestas sapien. Aliquam imperdiet ipsum convallis varius faucibus. Ut dictum dui nibh, nec vulputate enim laoreet pellentesque. Suspendisse ornare, dui nec bibendum ullamcorper, orci ligula semper turpis, sed lacinia velit mauris sit amet mi.
+                                <h4 class="text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                                    augue turpis, viverra et vulputate vel, egestas egestas sapien.
+                                    Aliquam imperdiet ipsum convallis varius faucibus. Ut dictum dui
+                                    nibh, nec vulputate enim laoreet pellentesque. Suspendisse
+                                    ornare, dui nec bibendum ullamcorper, orci ligula semper turpis,
+                                    sed lacinia velit mauris sit amet mi.
                                 </h4>
-                                <p class="text-xs text-gray-400 mt-2">By Asif Rahaman, 14 Mar, 2021</p>
+                                <p class="text-xs text-gray-400 mt-2">
+                                    By Asif Rahaman, 14 Mar, 2021
+                                </p>
                             </div>
 
                             <div class="mb-8 pb-8 border-b border-gray-300">
                                 <h1 class="text-xl font-semibold mb-2">Nice Product</h1>
-                                <h4 class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras augue turpis, viverra et vulputate vel, egestas egestas sapien. Aliquam imperdiet ipsum convallis varius faucibus. Ut dictum dui nibh, nec vulputate enim laoreet pellentesque. Suspendisse ornare, dui nec bibendum ullamcorper, orci ligula semper turpis, sed lacinia velit mauris sit amet mi.
+                                <h4 class="text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                                    augue turpis, viverra et vulputate vel, egestas egestas sapien.
+                                    Aliquam imperdiet ipsum convallis varius faucibus. Ut dictum dui
+                                    nibh, nec vulputate enim laoreet pellentesque. Suspendisse
+                                    ornare, dui nec bibendum ullamcorper, orci ligula semper turpis,
+                                    sed lacinia velit mauris sit amet mi.
                                 </h4>
-                                <p class="text-xs text-gray-400 mt-2">By Asif Rahaman, 14 Mar, 2021</p>
+                                <p class="text-xs text-gray-400 mt-2">
+                                    By Asif Rahaman, 14 Mar, 2021
+                                </p>
                             </div>
 
                             <div class="mb-8 pb-8 border-b border-gray-300">
                                 <h1 class="text-xl font-semibold mb-2">Good Product</h1>
-                                <h4 class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras augue turpis, viverra et vulputate vel, egestas egestas sapien. Aliquam imperdiet ipsum convallis varius faucibus. Ut dictum dui nibh, nec vulputate enim laoreet pellentesque. Suspendisse ornare, dui nec bibendum ullamcorper, orci ligula semper turpis, sed lacinia velit mauris sit amet mi.
+                                <h4 class="text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                                    augue turpis, viverra et vulputate vel, egestas egestas sapien.
+                                    Aliquam imperdiet ipsum convallis varius faucibus. Ut dictum dui
+                                    nibh, nec vulputate enim laoreet pellentesque. Suspendisse
+                                    ornare, dui nec bibendum ullamcorper, orci ligula semper turpis,
+                                    sed lacinia velit mauris sit amet mi.
                                 </h4>
-                                <p class="text-xs text-gray-400 mt-2">By Asif Rahaman, 14 Mar, 2021</p>
+                                <p class="text-xs text-gray-400 mt-2">
+                                    By Asif Rahaman, 14 Mar, 2021
+                                </p>
                             </div>
 
                             <div class="mb-8 pb-8 border-b border-gray-300">
                                 <h1 class="text-xl font-semibold mb-2">Nice Product</h1>
-                                <h4 class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras augue turpis, viverra et vulputate vel, egestas egestas sapien. Aliquam imperdiet ipsum convallis varius faucibus. Ut dictum dui nibh, nec vulputate enim laoreet pellentesque. Suspendisse ornare, dui nec bibendum ullamcorper, orci ligula semper turpis, sed lacinia velit mauris sit amet mi.
+                                <h4 class="text-base">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                                    augue turpis, viverra et vulputate vel, egestas egestas sapien.
+                                    Aliquam imperdiet ipsum convallis varius faucibus. Ut dictum dui
+                                    nibh, nec vulputate enim laoreet pellentesque. Suspendisse
+                                    ornare, dui nec bibendum ullamcorper, orci ligula semper turpis,
+                                    sed lacinia velit mauris sit amet mi.
                                 </h4>
-                                <p class="text-xs text-gray-400 mt-2">By Asif Rahaman, 14 Mar, 2021</p>
+                                <p class="text-xs text-gray-400 mt-2">
+                                    By Asif Rahaman, 14 Mar, 2021
+                                </p>
                             </div>
 
                             <a href="#" class="text-base font-semibold">Expand more reviews</a>
@@ -746,28 +820,57 @@
                             <hr class="border border-grey-300 my-8" />
                             <form action="">
                                 <div class="flex items-center my-2">
-                                    <h1 class="text-base font-medium">Add Rating: </h1>
+                                    <h1 class="text-base font-medium">Add Rating:</h1>
                                     <div class="flex items-center">
-                                        <i class="bi bi-star-fill cursor-pointer mx-0.5 text-2xl text-gray-400 hover:text-yellow-400 normal-transition"></i>
-                                        <i class="bi bi-star-fill cursor-pointer mx-0.5 text-2xl text-gray-400 hover:text-yellow-400 normal-transition"></i>
-                                        <i class="bi bi-star-fill cursor-pointer mx-0.5 text-2xl text-gray-400 hover:text-yellow-400 normal-transition"></i>
-                                        <i class="bi bi-star-fill cursor-pointer mx-0.5 text-2xl text-gray-400 hover:text-yellow-400 normal-transition"></i>
-                                        <i class="bi bi-star-fill cursor-pointer mx-0.5 text-2xl text-gray-400 hover:text-yellow-400 normal-transition"></i>
+                                        <i
+                                            class="bi bi-star-fill cursor-pointer mx-0.5 text-2xl text-gray-400 hover:text-yellow-400 normal-transition"
+                                        ></i>
+                                        <i
+                                            class="bi bi-star-fill cursor-pointer mx-0.5 text-2xl text-gray-400 hover:text-yellow-400 normal-transition"
+                                        ></i>
+                                        <i
+                                            class="bi bi-star-fill cursor-pointer mx-0.5 text-2xl text-gray-400 hover:text-yellow-400 normal-transition"
+                                        ></i>
+                                        <i
+                                            class="bi bi-star-fill cursor-pointer mx-0.5 text-2xl text-gray-400 hover:text-yellow-400 normal-transition"
+                                        ></i>
+                                        <i
+                                            class="bi bi-star-fill cursor-pointer mx-0.5 text-2xl text-gray-400 hover:text-yellow-400 normal-transition"
+                                        ></i>
                                     </div>
                                 </div>
                                 <div class="my-2">
-                                    <h1 class="text-base font-medium mb-2">Add A Written Review: </h1>
-                                    <textarea class="border rounded-xl p-3 w-full focus:outline-none lg:w-7/12" name="review" id="" rows="7" placeholder="Tell us what you like or dislike about this product"></textarea>
+                                    <h1 class="text-base font-medium mb-2">
+                                        Add A Written Review:
+                                    </h1>
+                                    <textarea
+                                        class="border rounded-xl p-3 w-full focus:outline-none lg:w-7/12"
+                                        name="review"
+                                        id=""
+                                        rows="7"
+                                        placeholder="Tell us what you like or dislike about this product"
+                                    ></textarea>
                                 </div>
-    
+
                                 <div class="my-2">
-                                    <h1 class="text-base font-medium mb-2">Add Title: </h1>
-                                    <p class="text-xs text-gray-400 mb-2">Sum up your review in one line</p>
-                                    <input class="border rounded-xl p-4 text-base w-full focus:outline-none lg:w-7/12" name="review" placeholder="Tell us what you like or dislike about this product" />
+                                    <h1 class="text-base font-medium mb-2">Add Title:</h1>
+                                    <p class="text-xs text-gray-400 mb-2">
+                                        Sum up your review in one line
+                                    </p>
+                                    <input
+                                        class="border rounded-xl p-4 text-base w-full focus:outline-none lg:w-7/12"
+                                        name="review"
+                                        placeholder="Tell us what you like or dislike about this product"
+                                    />
                                 </div>
-    
+
                                 <div class="my-2">
-                                    <button type="submit" class="py-4 px-10 border rounded-xl bg-red-700 text-white hover:shadow-xl normal-transition">Submit</button>
+                                    <button
+                                        type="submit"
+                                        class="py-4 px-10 border rounded-xl bg-red-700 text-white hover:shadow-xl normal-transition"
+                                    >
+                                        Submit
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -1711,11 +1814,8 @@
                             <span class="font-bold mx-2">
                                 <a href="/">Royex Technologies</a>
                             </span>
-                            <img
-                                x-on:click="window.scrollTo(0, 0);"
-                                class="cu[6.4rem]-pauto                              src="./src/images/go-top.png"
-                                alt="go-top"
-                            />
+                            <img x-on:click="window.scrollTo(0, 0);" class="cu[6.4rem]-pauto
+                            src="./src/images/go-top.png" alt="go-top" />
                         </p>
                     </div>
                 </div>
