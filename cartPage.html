@@ -14,7 +14,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
 
-        <title>Near Expiry | Login</title>
+        <title>Near Expiry | Cart</title>
     </head>
     <body
         x-data="{navOpen:false,cartOpen:false}"
@@ -384,87 +384,460 @@
             </div>
         </section>
 
-        <!-- login area -->
-        <section class="my-14">
-            <div class="container mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 shadow-lg border rounded-xl">
-                    <div class="h-full w-full hidden lg:block">
-                        <img
-                            class="h-full w-full"
-                            src="./src/images/login-side-img.png"
-                            alt="login-side-img"
-                        />
+        <!-- breadcrumb area -->
+        <section class="container mx-auto py-12">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="flex w-full justify-center lg:justify-end">
+                    <h1 class="red-bottom-line text-xl lg:text-3xl font-semibold">
+                        Your Shopping Cart
+                    </h1>
+                </div>
+                <div class="flex w-full mt-5 lg:mt-0 justify-center lg:justify-end">
+                    <div class="flex items-center">
+                        <a href="homePage.html" class="text-base mx-0.5">Home</a>
+                        <i class="bi bi-chevron-right text-xs font-extrabold mx-0.5"></i>
+                        <a href="productDetails.html" class="text-base mx-0.5">Product Details</a>
+                        <i class="bi bi-chevron-right text-xs font-extrabold mx-0.5"></i>
+                        <p class="text-base mx-.5 font-semibold text-red-700">Cart</p>
                     </div>
-                    <div class="flex justify-center items-center">
-                        <div class="py-7 lg:py-0">
-                            <h1 class="text-3xl font-semibold red-bottom-line text-center">
-                                Login
-                            </h1>
-                            <p class="text-sm mt-7 text-center">
-                                Please Login Below Account Detail
-                            </p>
-                            <form class="mt-11 w-auto lg:w-[30.938rem]">
-                                <div class="my-3">
-                                    <label for="email" class="text-base mb-2 block">Email:</label>
-                                    <input
-                                        type="text"
-                                        id="email"
-                                        class="py-4 px-6 border rounded-lg text-gray-400 focus:outline-none w-full"
-                                        placeholder="admin@royex.net"
-                                    />
-                                </div>
-                                <div class="my-3">
-                                    <label for="email" class="text-base mb-2 block">
-                                        Password:
-                                    </label>
-                                    <input
-                                        type="password"
-                                        id="email"
-                                        class="py-4 px-6 border rounded-lg text-gray-400 focus:outline-none w-full"
-                                        placeholder="Input password"
-                                    />
-                                </div>
-                                <div class="my-3 flex justify-between items-center">
-                                    <label
-                                        for="remember"
-                                        class="text-xs text-gray-400 cursor-pointer flex items-center"
-                                    >
-                                        <input
-                                            type="checkbox"
-                                            id="remember"
-                                            class="mr-2 rtl:ml-2 rounded-lg accent-red-700"
-                                        />
-                                        Remember Me
-                                    </label>
+                </div>
+            </div>
+        </section>
 
-                                    <a href="forgotPassword.html" class="text-xs">
-                                        Forget Password?
-                                    </a>
-                                </div>
-
-                                <div
-                                    class="mt-10 flex flex-col lg:flex-row justify-between items-center"
-                                >
-                                    <button
-                                        type="submit"
-                                        class="py-5 px-16 border rounded-lg bg-red-700 text-white hover:shadow-xl normal-transition"
-                                    >
-                                        Submit
-                                    </button>
+        <!-- cart area -->
+        <section class="my-12">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <div class="col-span-2">
+                        <div
+                            class="p-3 border-b bg-gray-100 hover:bg-gray-200 my-2 rounded-lg normal-transition"
+                        >
+                            <div class="flex justify-between h-[6.063rem]">
+                                <div class="flex items-center">
                                     <div
-                                        class="text-sm flex flex-col lg:flex-row items-center mt-3 lg:mt-0"
+                                        class="w-[5.313rem] h-[4.375rem] flex justify-center items-center mr-4"
                                     >
-                                        <p>Don’t Have an Account?</p>
-                                        <a
-                                            href="registration.html"
-                                            class="text-lg font-semibold ml-2 rtl:mr-2"
-                                        >
-                                            Registration
-                                        </a>
+                                        <img
+                                            class="h-auto w-auto"
+                                            src="./src/images/cart-product.png"
+                                            alt="thumb-cart-image"
+                                        />
+                                    </div>
+                                    <div class="">
+                                        <h1 class="text-base font-medium">Shan Shahi Halem Mix</h1>
+                                        <h2 class="text-xs text-gray-400">500 gm</h2>
+                                        <div class="flex items-center mt-2">
+                                            <span class="text-base mx-1">1</span>
+                                            <span class="text-base mx-1">x</span>
+                                            <span class="text-xs mx-1">AED</span>
+                                            <span class="text-xl font-semibold text-red-700 mx-1"
+                                                >30</span
+                                            >
+                                        </div>
                                     </div>
                                 </div>
-                            </form>
+                                <div class="flex flex-col justify-between items-end">
+                                    <div class="flex items-center">
+                                        <img
+                                            class="shadow-md h-8 w-8 mr-1 rtl:ml-1 rounded-full border cursor-pointer"
+                                            src="./src/images/bin-icon.png"
+                                            alt="bin-icon"
+                                        />
+                                        <img
+                                            class="shadow-md h-8 w-8 rounded-full border cursor-pointer"
+                                            src="./src/images/edit-icon.png"
+                                            alt="bin-icon"
+                                        />
+                                    </div>
+                                    <div x-data="{ count: 0}" class="mt-8 flex items-center">
+                                        <div class="ml-2 rtl:mr-2">
+                                            <div class="flex items-center">
+                                                <img
+                                                    x-on:click="count > 0 ? count-- : openPrice = false"
+                                                    class="cu[6.4rem]-poautoer:shadow-lg cursor-pointer shadow normal-transition"
+                                                    src="./src/images/decrement-icon.png"
+                                                    alt="increment"
+                                                />
+                                                <input
+                                                    class="text-base mx-2 text-black bg-transparent focus:outline-none text-center w-5"
+                                                    x-model="count"
+                                                />
+                                                <img
+                                                    x-on:click="count++"
+                                                    class="cu[6.4rem]-poautoer:shadow-lg cursor-pointer shadow normal-transition"
+                                                    src="./src/images/increment-icon.png"
+                                                    alt="decrement"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <div
+                            class="p-3 border-b bg-gray-100 hover:bg-gray-200 my-2 rounded-lg normal-transition"
+                        >
+                            <div class="flex justify-between h-[6.063rem]">
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-[5.313rem] h-[4.375rem] flex justify-center items-center mr-4"
+                                    >
+                                        <img
+                                            class="h-auto w-auto"
+                                            src="./src/images/cart-product.png"
+                                            alt="thumb-cart-image"
+                                        />
+                                    </div>
+                                    <div class="">
+                                        <h1 class="text-base font-medium">Shan Shahi Halem Mix</h1>
+                                        <h2 class="text-xs text-gray-400">500 gm</h2>
+                                        <div class="flex items-center mt-2">
+                                            <span class="text-base mx-1">1</span>
+                                            <span class="text-base mx-1">x</span>
+                                            <span class="text-xs mx-1">AED</span>
+                                            <span class="text-xl font-semibold text-red-700 mx-1"
+                                                >30</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col justify-between items-end">
+                                    <div class="flex items-center">
+                                        <img
+                                            class="shadow-md h-8 w-8 mr-1 rtl:ml-1 rounded-full border cursor-pointer"
+                                            src="./src/images/bin-icon.png"
+                                            alt="bin-icon"
+                                        />
+                                        <img
+                                            class="shadow-md h-8 w-8 rounded-full border cursor-pointer"
+                                            src="./src/images/edit-icon.png"
+                                            alt="bin-icon"
+                                        />
+                                    </div>
+                                    <div x-data="{ count: 0}" class="mt-8 flex items-center">
+                                        <div class="ml-2 rtl:mr-2">
+                                            <div class="flex items-center">
+                                                <img
+                                                    x-on:click="count > 0 ? count-- : openPrice = false"
+                                                    class="cu[6.4rem]-poautoer:shadow-lg cursor-pointer shadow normal-transition"
+                                                    src="./src/images/decrement-icon.png"
+                                                    alt="increment"
+                                                />
+                                                <input
+                                                    class="text-base mx-2 text-black bg-transparent focus:outline-none text-center w-5"
+                                                    x-model="count"
+                                                />
+                                                <img
+                                                    x-on:click="count++"
+                                                    class="cu[6.4rem]-poautoer:shadow-lg cursor-pointer shadow normal-transition"
+                                                    src="./src/images/increment-icon.png"
+                                                    alt="decrement"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-3 border-b bg-gray-100 hover:bg-gray-200 my-2 rounded-lg normal-transition"
+                        >
+                            <div class="flex justify-between h-[6.063rem]">
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-[5.313rem] h-[4.375rem] flex justify-center items-center mr-4"
+                                    >
+                                        <img
+                                            class="h-auto w-auto"
+                                            src="./src/images/cart-product.png"
+                                            alt="thumb-cart-image"
+                                        />
+                                    </div>
+                                    <div class="">
+                                        <h1 class="text-base font-medium">Shan Shahi Halem Mix</h1>
+                                        <h2 class="text-xs text-gray-400">500 gm</h2>
+                                        <div class="flex items-center mt-2">
+                                            <span class="text-base mx-1">1</span>
+                                            <span class="text-base mx-1">x</span>
+                                            <span class="text-xs mx-1">AED</span>
+                                            <span class="text-xl font-semibold text-red-700 mx-1"
+                                                >30</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col justify-between items-end">
+                                    <div class="flex items-center">
+                                        <img
+                                            class="shadow-md h-8 w-8 mr-1 rtl:ml-1 rounded-full border cursor-pointer"
+                                            src="./src/images/bin-icon.png"
+                                            alt="bin-icon"
+                                        />
+                                        <img
+                                            class="shadow-md h-8 w-8 rounded-full border cursor-pointer"
+                                            src="./src/images/edit-icon.png"
+                                            alt="bin-icon"
+                                        />
+                                    </div>
+                                    <div x-data="{ count: 0}" class="mt-8 flex items-center">
+                                        <div class="ml-2 rtl:mr-2">
+                                            <div class="flex items-center">
+                                                <img
+                                                    x-on:click="count > 0 ? count-- : openPrice = false"
+                                                    class="cu[6.4rem]-poautoer:shadow-lg cursor-pointer shadow normal-transition"
+                                                    src="./src/images/decrement-icon.png"
+                                                    alt="increment"
+                                                />
+                                                <input
+                                                    class="text-base mx-2 text-black bg-transparent focus:outline-none text-center w-5"
+                                                    x-model="count"
+                                                />
+                                                <img
+                                                    x-on:click="count++"
+                                                    class="cu[6.4rem]-poautoer:shadow-lg cursor-pointer shadow normal-transition"
+                                                    src="./src/images/increment-icon.png"
+                                                    alt="decrement"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-3 border-b bg-gray-100 hover:bg-gray-200 my-2 rounded-lg normal-transition"
+                        >
+                            <div class="flex justify-between h-[6.063rem]">
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-[5.313rem] h-[4.375rem] flex justify-center items-center mr-4"
+                                    >
+                                        <img
+                                            class="h-auto w-auto"
+                                            src="./src/images/cart-product.png"
+                                            alt="thumb-cart-image"
+                                        />
+                                    </div>
+                                    <div class="">
+                                        <h1 class="text-base font-medium">Shan Shahi Halem Mix</h1>
+                                        <h2 class="text-xs text-gray-400">500 gm</h2>
+                                        <div class="flex items-center mt-2">
+                                            <span class="text-base mx-1">1</span>
+                                            <span class="text-base mx-1">x</span>
+                                            <span class="text-xs mx-1">AED</span>
+                                            <span class="text-xl font-semibold text-red-700 mx-1"
+                                                >30</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col justify-between items-end">
+                                    <div class="flex items-center">
+                                        <img
+                                            class="shadow-md h-8 w-8 mr-1 rtl:ml-1 rounded-full border cursor-pointer"
+                                            src="./src/images/bin-icon.png"
+                                            alt="bin-icon"
+                                        />
+                                        <img
+                                            class="shadow-md h-8 w-8 rounded-full border cursor-pointer"
+                                            src="./src/images/edit-icon.png"
+                                            alt="bin-icon"
+                                        />
+                                    </div>
+                                    <div x-data="{ count: 0}" class="mt-8 flex items-center">
+                                        <div class="ml-2 rtl:mr-2">
+                                            <div class="flex items-center">
+                                                <img
+                                                    x-on:click="count > 0 ? count-- : openPrice = false"
+                                                    class="cu[6.4rem]-poautoer:shadow-lg cursor-pointer shadow normal-transition"
+                                                    src="./src/images/decrement-icon.png"
+                                                    alt="increment"
+                                                />
+                                                <input
+                                                    class="text-base mx-2 text-black bg-transparent focus:outline-none text-center w-5"
+                                                    x-model="count"
+                                                />
+                                                <img
+                                                    x-on:click="count++"
+                                                    class="cu[6.4rem]-poautoer:shadow-lg cursor-pointer shadow normal-transition"
+                                                    src="./src/images/increment-icon.png"
+                                                    alt="decrement"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-3 border-b bg-gray-100 hover:bg-gray-200 my-2 rounded-lg normal-transition"
+                        >
+                            <div class="flex justify-between h-[6.063rem]">
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-[5.313rem] h-[4.375rem] flex justify-center items-center mr-4"
+                                    >
+                                        <img
+                                            class="h-auto w-auto"
+                                            src="./src/images/cart-product.png"
+                                            alt="thumb-cart-image"
+                                        />
+                                    </div>
+                                    <div class="">
+                                        <h1 class="text-base font-medium">Shan Shahi Halem Mix</h1>
+                                        <h2 class="text-xs text-gray-400">500 gm</h2>
+                                        <div class="flex items-center mt-2">
+                                            <span class="text-base mx-1">1</span>
+                                            <span class="text-base mx-1">x</span>
+                                            <span class="text-xs mx-1">AED</span>
+                                            <span class="text-xl font-semibold text-red-700 mx-1"
+                                                >30</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col justify-between items-end">
+                                    <div class="flex items-center">
+                                        <img
+                                            class="shadow-md h-8 w-8 mr-1 rtl:ml-1 rounded-full border cursor-pointer"
+                                            src="./src/images/bin-icon.png"
+                                            alt="bin-icon"
+                                        />
+                                        <img
+                                            class="shadow-md h-8 w-8 rounded-full border cursor-pointer"
+                                            src="./src/images/edit-icon.png"
+                                            alt="bin-icon"
+                                        />
+                                    </div>
+                                    <div x-data="{ count: 0}" class="mt-8 flex items-center">
+                                        <div class="ml-2 rtl:mr-2">
+                                            <div class="flex items-center">
+                                                <img
+                                                    x-on:click="count > 0 ? count-- : openPrice = false"
+                                                    class="cu[6.4rem]-poautoer:shadow-lg cursor-pointer shadow normal-transition"
+                                                    src="./src/images/decrement-icon.png"
+                                                    alt="increment"
+                                                />
+                                                <input
+                                                    class="text-base mx-2 text-black bg-transparent focus:outline-none text-center w-5"
+                                                    x-model="count"
+                                                />
+                                                <img
+                                                    x-on:click="count++"
+                                                    class="cu[6.4rem]-poautoer:shadow-lg cursor-pointer shadow normal-transition"
+                                                    src="./src/images/increment-icon.png"
+                                                    alt="decrement"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center lg:justify-start">
+                            <button
+                                class="py-3 px-8 mt-5 border rounded-lg bg-black text-white hover:shadow-xl mr-2 rtl:ml-2 normal-transition"
+                            >
+                                Continue Shopping
+                            </button>
+                            <button
+                                class="py-3 px-8 mt-5 border rounded-lg bg-white border-red-700 hover:shadow-xl normal-transition"
+                            >
+                                Clear cart
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <form>
+                            <h1 class="text-base font-medium mb-2">Add Comments:</h1>
+                            <textarea
+                                class="border rounded-xl p-3 w-full focus:outline-none"
+                                name="review"
+                                id=""
+                                rows="3"
+                                placeholder="Add comment about this product"
+                            ></textarea>
+                            <div class="my-2">
+                                <button
+                                    type="submit"
+                                    class="py-3 px-8 border rounded-xl bg-red-700 text-white hover:shadow-xl normal-transition"
+                                >
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="py-5 px-8 border border-b-0 rounded-t-lg shadow mt-3">
+                            <h1 class="text-2xl font-semibold">Summary</h1>
+                            <hr class="bg-gray-200 my-3" />
+                            <div class="my-1 flex justify-between items-center">
+                                <h4 class="text-base">Subtotal</h4>
+                                <p class="flex items-center">
+                                    <span class="text-xs">AED</span>
+                                    <span class="text-2xl font-semibold ml-2 rtl:mr-2 text-red-700">
+                                        65
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="my-1 flex justify-between items-center">
+                                <h4 class="text-base">Shipping Charges</h4>
+                                <p class="flex items-center">
+                                    <span class="text-xs">AED</span>
+                                    <span class="text-2xl font-semibold ml-2 rtl:mr-2 text-red-700">
+                                        65
+                                    </span>
+                                </p>
+                            </div>
+
+                            <div class="my-1 mt-5">
+                                <h4 class="text-base font-medium mb-2">Apply Coupon</h4>
+                                <div class="flex justify-between items-center">
+                                    <form
+                                        class="px-5 py-4 flex justify-between border rounded-xl w-4/6"
+                                    >
+                                        <input
+                                            type="text"
+                                            class="text-xs focus:outline-none w-4/6"
+                                            placeholder="Type Coupon Code"
+                                        />
+                                        <button type="submit" class="text-xs font-semibold">
+                                            Apply now
+                                        </button>
+                                    </form>
+                                    <p class="flex items-center">
+                                        <span class="text-xs">AED</span>
+                                        <span
+                                            class="text-2xl font-semibold ml-2 rtl:mr-2 text-red-700"
+                                        >
+                                            - 65
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="py-5 px-8 flex justify-between items-center border rounded-b-lg shadow bg-gray-100"
+                        >
+                            <h4 class="text-base font-medium">Total payable amount</h4>
+                            <p class="flex items-center">
+                                <span class="text-xs">AED</span>
+                                <span class="text-2xl font-semibold ml-2 rtl:mr-2 text-red-700">
+                                    65
+                                </span>
+                            </p>
+                        </div>
+
+                        <button
+                            href="#"
+                            class="py-3 px-8 mt-5 border rounded-xl bg-black text-white hover:shadow-xl normal-transition"
+                        >
+                            <a href="checkout.html">Checkout</a>
+                        </button>
                     </div>
                 </div>
             </div>

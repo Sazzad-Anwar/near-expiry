@@ -14,7 +14,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
 
-        <title>Near Expiry | Login</title>
+        <title>Near Expiry | Checkout</title>
     </head>
     <body
         x-data="{navOpen:false,cartOpen:false}"
@@ -384,86 +384,241 @@
             </div>
         </section>
 
-        <!-- login area -->
-        <section class="my-14">
-            <div class="container mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 shadow-lg border rounded-xl">
-                    <div class="h-full w-full hidden lg:block">
-                        <img
-                            class="h-full w-full"
-                            src="./src/images/login-side-img.png"
-                            alt="login-side-img"
-                        />
+        <!-- breadcrumb area -->
+        <section class="container mx-auto py-12">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="flex w-full justify-center lg:justify-end">
+                    <h1 class="red-bottom-line text-xl lg:text-3xl font-semibold">Checkout</h1>
+                </div>
+                <div class="flex w-full mt-5 lg:mt-0 justify-center lg:justify-end">
+                    <div class="flex items-center">
+                        <a href="homePage.html" class="text-base mx-0.5">Home</a>
+                        <i class="bi bi-chevron-right text-xs font-extrabold mx-0.5"></i>
+                        <a href="homePage.html" class="text-base mx-0.5">Product Details</a>
+                        <i class="bi bi-chevron-right text-xs font-extrabold mx-0.5"></i>
+                        <a href="homePage.html" class="text-base mx-0.5">Cart</a>
+                        <i class="bi bi-chevron-right text-xs font-extrabold mx-0.5"></i>
+                        <p class="text-base mx-.5 font-semibold text-red-700">Checkout</p>
                     </div>
-                    <div class="flex justify-center items-center">
-                        <div class="py-7 lg:py-0">
-                            <h1 class="text-3xl font-semibold red-bottom-line text-center">
-                                Login
-                            </h1>
-                            <p class="text-sm mt-7 text-center">
-                                Please Login Below Account Detail
-                            </p>
-                            <form class="mt-11 w-auto lg:w-[30.938rem]">
-                                <div class="my-3">
-                                    <label for="email" class="text-base mb-2 block">Email:</label>
-                                    <input
-                                        type="text"
-                                        id="email"
-                                        class="py-4 px-6 border rounded-lg text-gray-400 focus:outline-none w-full"
-                                        placeholder="admin@royex.net"
-                                    />
-                                </div>
-                                <div class="my-3">
-                                    <label for="email" class="text-base mb-2 block">
-                                        Password:
-                                    </label>
-                                    <input
-                                        type="password"
-                                        id="email"
-                                        class="py-4 px-6 border rounded-lg text-gray-400 focus:outline-none w-full"
-                                        placeholder="Input password"
-                                    />
-                                </div>
-                                <div class="my-3 flex justify-between items-center">
-                                    <label
-                                        for="remember"
-                                        class="text-xs text-gray-400 cursor-pointer flex items-center"
-                                    >
-                                        <input
-                                            type="checkbox"
-                                            id="remember"
-                                            class="mr-2 rtl:ml-2 rounded-lg accent-red-700"
-                                        />
-                                        Remember Me
-                                    </label>
+                </div>
+            </div>
+        </section>
 
-                                    <a href="forgotPassword.html" class="text-xs">
-                                        Forget Password?
-                                    </a>
-                                </div>
-
+        <!-- checkout area -->
+        <section class="my-12">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <div x-data="{ selected:'home' }" class="col-span-2">
+                        <h1 class="text-[1.625rem] font-semibold">Shipping To</h1>
+                        <div
+                            x-on:click="selected = 'home'"
+                            x-bind:class="selected === 'home'? 'p-5 my-4 border rounded-lg bg-gray-100 shadow-lg grid grid-cols-1 lg:grid-cols-3 gap-4 cursor-pointer':'p-5 my-4 border rounded-lg bg-white grid grid-cols-1 lg:grid-cols-3 gap-4 cursor-pointer'"
+                        >
+                            <div class="flex">
                                 <div
-                                    class="mt-10 flex flex-col lg:flex-row justify-between items-center"
-                                >
-                                    <button
-                                        type="submit"
-                                        class="py-5 px-16 border rounded-lg bg-red-700 text-white hover:shadow-xl normal-transition"
-                                    >
-                                        Submit
-                                    </button>
-                                    <div
-                                        class="text-sm flex flex-col lg:flex-row items-center mt-3 lg:mt-0"
-                                    >
-                                        <p>Don’t Have an Account?</p>
-                                        <a
-                                            href="registration.html"
-                                            class="text-lg font-semibold ml-2 rtl:mr-2"
-                                        >
-                                            Registration
-                                        </a>
+                                    x-bind:class="selected === 'home'? 'h-2 w-3 border-8 border-red-700 p-2 rounded-full':'h-8 w-8 border rounded-full p-2'"
+                                ></div>
+                                <div class="ml-4 rtl:mr-4">
+                                    <h1 class="text-lg font-semibold">Home</h1>
+                                    <h2 class="text-base font-medium mb-1">Asif Rahaman</h2>
+                                    <div class="flex">
+                                        <div class="flex">
+                                            <img
+                                                class="h-4 w-auto mr-1 rtl:ml-1"
+                                                src="./src/images/location-icon-black.png"
+                                                alt="location"
+                                            />
+                                            <address class="text-xs text-gray-600">
+                                                G3, New City Build, Ground Floor, Jumera Lake Lower,
+                                                Dubai
+                                            </address>
+                                        </div>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
+                            <div
+                                class="flex ml-[3rem] rtl:mr-[3rem] lg:ml-0 items-center text-center w-full"
+                            >
+                                <img
+                                    class="h-3 w-auto"
+                                    src="./src/images/call-icon-black.png"
+                                    alt="call"
+                                />
+                                <a href="tel:+971 0554830687" class="text-xs text-gray-600">
+                                    +971 0554830687
+                                </a>
+                            </div>
+                            <a href="#" class="flex justify-end">
+                                <img class="h-8 w-8" src="./src/images/edit-icon.png" alt="edit" />
+                            </a>
+                        </div>
+                        <div
+                            x-on:click="selected = 'office'"
+                            x-bind:class="selected === 'office'? 'p-5 my-4 border rounded-lg bg-gray-100 shadow-lg grid grid-cols-1 lg:grid-cols-3 gap-4 cursor-pointer':'p-5 my-4 border rounded-lg bg-white grid grid-cols-1 lg:grid-cols-3 gap-4 cursor-pointer'"
+                        >
+                            <div class="flex">
+                                <div
+                                    x-bind:class="selected === 'office'? 'h-2 w-3 border-8 border-red-700 p-2 rounded-full':'h-8 w-8 border rounded-full p-2'"
+                                ></div>
+                                <div class="ml-4 rtl:mr-4">
+                                    <h1 class="text-lg font-semibold">Home</h1>
+                                    <h2 class="text-base font-medium mb-1">Asif Rahaman</h2>
+                                    <div class="flex">
+                                        <div class="flex">
+                                            <img
+                                                class="h-4 w-auto mr-1 rtl:ml-1"
+                                                src="./src/images/location-icon-black.png"
+                                                alt="location"
+                                            />
+                                            <address class="text-xs text-gray-600">
+                                                G3, New City Build, Ground Floor, Jumera Lake Lower,
+                                                Dubai
+                                            </address>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex ml-[3rem] rtl:mr-[3rem] items-center text-center w-full"
+                            >
+                                <img
+                                    class="h-3 w-auto"
+                                    src="./src/images/call-icon-black.png"
+                                    alt="call"
+                                />
+                                <a href="tel:+971 0554830687" class="text-xs text-gray-600">
+                                    +971 0554830687
+                                </a>
+                            </div>
+                            <a href="#" class="flex justify-end">
+                                <img class="h-8 w-8" src="./src/images/edit-icon.png" alt="edit" />
+                            </a>
+                        </div>
+                        <div
+                            x-on:click="selected = 'others'"
+                            x-bind:class="selected === 'others'? 'p-5 my-4 border rounded-lg bg-gray-100 shadow-lg cursor-pointer':'p-5 my-4 border rounded-lg bg-white cursor-pointer'"
+                        >
+                            <div class="flex items-center">
+                                <div
+                                    x-bind:class="selected === 'others'? 'h-2 w-3 border-8 border-red-700 p-2 rounded-full':'h-8 w-8 border rounded-full p-2'"
+                                ></div>
+                                <div class="ml-4 rtl:mr-4">
+                                    <h1 class="text-lg font-semibold">
+                                        Use A Different Billing Address
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="py-5 px-8 border border-b-0 rounded-t-lg shadow mt-3">
+                            <h1 class="text-2xl font-semibold">Summary</h1>
+                            <hr class="bg-gray-200 my-3" />
+                            <div class="my-1 flex justify-between items-center">
+                                <h4 class="text-base">Subtotal</h4>
+                                <p class="flex items-center">
+                                    <span class="text-xs">AED</span>
+                                    <span class="text-2xl font-semibold ml-2 rtl:mr-2 text-red-700">
+                                        65
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="my-1 flex justify-between items-center">
+                                <h4 class="text-base">Shipping Charges</h4>
+                                <p class="flex items-center">
+                                    <span class="text-xs">AED</span>
+                                    <span class="text-2xl font-semibold ml-2 rtl:mr-2 text-red-700">
+                                        65
+                                    </span>
+                                </p>
+                            </div>
+
+                            <div class="my-1 mt-5">
+                                <h4 class="text-base font-medium mb-2">Apply Coupon</h4>
+                                <div class="flex justify-between items-center">
+                                    <form
+                                        class="px-5 py-4 flex justify-between border rounded-xl w-4/6"
+                                    >
+                                        <input
+                                            type="text"
+                                            class="text-xs focus:outline-none w-4/6"
+                                            placeholder="Type Coupon Code"
+                                        />
+                                        <button type="submit" class="text-xs font-semibold">
+                                            Apply now
+                                        </button>
+                                    </form>
+                                    <p class="flex items-center">
+                                        <span class="text-xs">AED</span>
+                                        <span
+                                            class="text-2xl font-semibold ml-2 rtl:mr-2 text-red-700"
+                                        >
+                                            - 65
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="py-5 px-8 flex justify-between items-center border rounded-b-lg shadow bg-gray-100"
+                        >
+                            <h4 class="text-base font-medium">Total payable amount</h4>
+                            <p class="flex items-center">
+                                <span class="text-xs">AED</span>
+                                <span class="text-2xl font-semibold ml-2 rtl:mr-2 text-red-700">
+                                    65
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="py-5 px-8 border rounded-lg shadow mt-3">
+                            <div class="flex justify-between items-center">
+                                <h1 class="text-2xl font-semibold">Payment Method</h1>
+                                <a href="#" class="border rounded-lg py-2 px-3"> Add Card</a>
+                            </div>
+                            <hr class="bg-gray-200 my-3" />
+                            <div class="my-1 flex items-center">
+                                <input
+                                    type="checkbox"
+                                    name=""
+                                    id="masterCard"
+                                    class="accent-red-700 cursor-pointer"
+                                />
+                                <label
+                                    for="masterCard"
+                                    class="text-base ml-2 rtl:mr-2 font-medium cursor-pointer"
+                                >
+                                    Master Card - XXXX- 2345
+                                </label>
+                            </div>
+                            <div class="my-1 flex items-center">
+                                <input
+                                    type="checkbox"
+                                    name=""
+                                    id="visacard"
+                                    class="accent-red-700 cursor-pointer"
+                                />
+                                <label
+                                    for="visacard"
+                                    class="text-base ml-2 rtl:mr-2 font-medium cursor-pointer"
+                                >
+                                    Visa Card - XXXX- 2345
+                                </label>
+                            </div>
+                        </div>
+                        <div class="flex justify-center lg:justify-start">
+                            <button
+                                href="thankyou.html"
+                                class="py-3 px-8 mt-5 border rounded-lg bg-black text-white hover:shadow-xl mr-2 rtl:ml-2 normal-transition"
+                            >
+                                <a href="thankyou.html">Pay now</a>
+                            </button>
+                            <button
+                                href="cartPage.html"
+                                class="py-3 px-8 mt-5 border rounded-lg bg-white border-red-700 hover:shadow-xl normal-transition"
+                            >
+                                <a href="cartPage.html">Cancel</a>
+                            </button>
                         </div>
                     </div>
                 </div>
