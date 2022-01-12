@@ -14,7 +14,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
 
-        <title>Near Expiry | Login</title>
+        <title>Near Expiry | Home</title>
     </head>
     <body
         x-data="{navOpen:false,cartOpen:false}"
@@ -384,88 +384,277 @@
             </div>
         </section>
 
-        <!-- login area -->
-        <section class="my-14">
-            <div class="container mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 shadow-lg border rounded-xl">
-                    <div class="h-full w-full hidden lg:block">
-                        <img
-                            class="h-full w-full"
-                            src="./src/images/login-side-img.png"
-                            alt="login-side-img"
-                        />
+        <!-- breadcrumb area -->
+        <section class="container mx-auto py-12">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="flex w-full justify-center lg:justify-end">
+                    <h1 class="red-bottom-line text-xl lg:text-3xl font-semibold">My Account</h1>
+                </div>
+                <div class="flex w-full mt-5 lg:mt-0 justify-center lg:justify-end">
+                    <div class="flex items-center">
+                        <a href="homePage.html" class="text-base mx-0.5">Home</a>
+                        <i class="bi bi-chevron-right text-xs font-extrabold mx-0.5"></i>
+                        <p class="text-base mx-.5 font-semibold text-red-700">My Account</p>
                     </div>
-                    <div class="flex justify-center items-center">
-                        <div class="py-7 lg:py-0">
-                            <h1 class="text-3xl font-semibold red-bottom-line text-center">
-                                Login
-                            </h1>
-                            <p class="text-sm mt-7 text-center">
-                                Please Login Below Account Detail
-                            </p>
-                            <form class="mt-11 w-auto lg:w-[30.938rem]">
+                </div>
+            </div>
+        </section>
+
+        <!-- supermarket area -->
+        <section class="my-12">
+            <div class="container mx-auto"></div>
+        </section>
+
+        <!-- profile area -->
+        <section class="my-12">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-3 items-start">
+                    <div class="rounded-lg shadow-lg overflow-hidden">
+                        <div class="flex items-center p-7">
+                            <div class="relative group">
+                                <div
+                                    class="h-[7.625rem] w-[7.625rem] rounded-full border border-red-700 overflow-hidden relative"
+                                >
+                                    <div class="flex justify-center items-center">
+                                        <img
+                                            class="h-[7.625rem] w-auto"
+                                            src="./src/images/profile-pic.png"
+                                            alt="profile-pic"
+                                            id="profile-pic"
+                                        />
+                                    </div>
+                                    <button
+                                        class="group-hover:flex rounded-full absolute inset-0 w-full h-full hidden justify-center items-center z-20"
+                                    >
+                                        <div
+                                            class="flex justify-center items-center h-7 w-7 rounded-full bg-red-700"
+                                        >
+                                            <i class="bi bi-trash text-white"></i>
+                                        </div>
+                                    </button>
+                                    <div
+                                        class="group-hover:flex rounded-full absolute inset-0 w-full h-full bg-black opacity-50 hidden justify-center items-center z-10"
+                                    ></div>
+                                </div>
+
+                                <div
+                                    class="absolute right-2 bottom-0 h-7 w-auto cursor-pointer z-10"
+                                >
+                                    <input
+                                        type="file"
+                                        accept="image/*"
+                                        class="absolute inset-0 appearance-none opacity-0 w-full cursor-pointer"
+                                        id="profile-pic-input"
+                                        onchange="readFile(this)"
+                                    />
+                                    <img
+                                        class="rounded-full cursor-pointer"
+                                        src="./src/images/camera-icon.png"
+                                        alt="camera"
+                                        id="upload-profilePic"
+                                    />
+                                </div>
+                            </div>
+                            <div class="ml-5">
+                                <h1 class="text-lg font-medium">Asif Rahman</h1>
+                                <p class="flex items-center">
+                                    <img
+                                        src="./src/images/location-icon-black.png"
+                                        alt="location-icon"
+                                    />
+                                    <span class="text-xs ml-2"> Dubai, UAE </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <ul>
+                            <li class="py-4 px-7 h-14 bg-black text-white">
+                                <a href="myProfile.html" class="flex justify-between items-center">
+                                    <span class="flex items-center">
+                                        <img
+                                            class="mr-2 w-6 h-6"
+                                            src="./src/images/profile-icon.png"
+                                            alt="profile-icon"
+                                        />
+                                        <span class="text-lg">My Profile</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right text-base font-bold"></i>
+                                </a>
+                            </li>
+                            <li
+                                class="py-4 px-7 h-14 text-black hover:bg-black hover:text-white normal-transition"
+                            >
+                                <a href="myProfile.html" class="flex justify-between items-center">
+                                    <span class="flex items-center">
+                                        <img
+                                            class="mr-2 w-6 h-6"
+                                            src="./src/images/order-icon.png"
+                                            alt="order-icon"
+                                        />
+                                        <span class="text-lg">Orders</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right text-base font-bold"></i>
+                                </a>
+                            </li>
+                            <li
+                                class="py-4 px-7 h-14 text-black hover:bg-black hover:text-white normal-transition"
+                            >
+                                <a href="myProfile.html" class="flex justify-between items-center">
+                                    <span class="flex items-center">
+                                        <img
+                                            class="mr-2 w-6 h-6"
+                                            src="./src/images/delivery-profile-icon.png"
+                                            alt="delivery-icon"
+                                        />
+                                        <span class="text-lg">Delivery Address</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right text-base font-bold"></i>
+                                </a>
+                            </li>
+                            <li
+                                class="py-4 px-7 h-14 text-black hover:bg-black hover:text-white normal-transition"
+                            >
+                                <a href="myProfile.html" class="flex justify-between items-center">
+                                    <span class="flex items-center">
+                                        <img
+                                            class="mr-2 w-6 h-6"
+                                            src="./src/images/wishlist-icon.png"
+                                            alt="wishlist-icon"
+                                        />
+                                        <span class="text-lg">Wishlist</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right text-base font-bold"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="p-5 lg:px-14 lg:py-0 col-span-2">
+                        <h1 class="text-3xl font-semibold red-bottom-line text-center">
+                            My Profile
+                        </h1>
+                        <p class="text-sm mt-7 text-center">Update you profile</p>
+                        <form class="mt-11">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
                                 <div class="my-3">
-                                    <label for="email" class="text-base mb-2 block">Email:</label>
+                                    <label for="full-name" class="text-base mb-2 block">
+                                        Full Name:
+                                    </label>
                                     <input
                                         type="text"
-                                        id="email"
+                                        id="full-name"
                                         class="py-4 px-6 border rounded-lg text-gray-400 focus:outline-none w-full"
                                         placeholder="admin@royex.net"
                                     />
                                 </div>
                                 <div class="my-3">
-                                    <label for="email" class="text-base mb-2 block">
-                                        Password:
-                                    </label>
+                                    <label for="email" class="text-base mb-2 block"> Email </label>
                                     <input
-                                        type="password"
+                                        type="email"
                                         id="email"
                                         class="py-4 px-6 border rounded-lg text-gray-400 focus:outline-none w-full"
                                         placeholder="Input password"
                                     />
                                 </div>
-                                <div class="my-3 flex justify-between items-center">
-                                    <label
-                                        for="remember"
-                                        class="text-xs text-gray-400 cursor-pointer flex items-center"
+                                <div class="my-3">
+                                    <label for="mobile-number" class="text-base mb-2 block">
+                                        Mobile Number:
+                                    </label>
+                                    <div
+                                        class="px-6 py-4 flex items-center border rounded-lg text-gray-400 w-full"
+                                    >
+                                        <img
+                                            class="h-6 w-6 cursor-pointer"
+                                            src="./src/images/flag-1.png"
+                                            alt="flag"
+                                        />
+                                        <select
+                                            name="country-code"
+                                            id=""
+                                            class="appearance-none ml-2 rtl:mr-2 focus:outline-none cursor-pointer"
+                                        >
+                                            <option selected>+971</option>
+                                            <option value="">+880</option>
+                                            <option value="">+86</option>
+                                        </select>
+                                        <i
+                                            class="bi bi-chevron-down text-xs mr-2 rtl:ml-2 cursor-pointer"
+                                        ></i>
+                                        <input
+                                            type="text"
+                                            id="mobile-number"
+                                            class="focus:outline-none border-l-2 border-gray-400 text-sm pl-3 rtl:pr-3"
+                                            placeholder="1712123456"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="my-3">
+                                    <label for="code" class="text-base mb-2 block">
+                                        Profile Picture:
+                                    </label>
+                                    <div
+                                        class="flex items-center h-12 w-full border rounded-lg overflow-hidden"
                                     >
                                         <input
-                                            type="checkbox"
-                                            id="remember"
-                                            class="mr-2 rtl:ml-2 rounded-lg accent-red-700"
+                                            type="file"
+                                            id="code"
+                                            class="py-4 px-6 file:hidden text-gray-400 focus:outline-none w-3/4 appearance-none"
+                                            placeholder="Input password"
                                         />
-                                        Remember Me
-                                    </label>
-
-                                    <a href="forgotPassword.html" class="text-xs">
-                                        Forget Password?
-                                    </a>
+                                        <button
+                                            class="w-1/4 px-7 text-center rounded-r-lg h-full bg-red-700 text-xs text-white"
+                                        >
+                                            Upload
+                                        </button>
+                                    </div>
                                 </div>
-
+                                <div class="my-3">
+                                    <label for="password" class="text-base mb-2 block">
+                                        New Password:
+                                    </label>
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        class="py-4 px-6 border rounded-lg text-gray-400 focus:outline-none w-full"
+                                        placeholder="Input password"
+                                    />
+                                </div>
+                                <div class="my-3">
+                                    <label for="confirm-password" class="text-base mb-2 block">
+                                        Confirm Password:
+                                    </label>
+                                    <input
+                                        type="password"
+                                        id="confirm-password"
+                                        class="py-4 px-6 border rounded-lg text-gray-400 focus:outline-none w-full"
+                                        placeholder="Input password"
+                                    />
+                                </div>
+                            </div>
+                            <div class="my-3 flex justify-between items-center">
+                                <label
+                                    for="remember"
+                                    class="text-xs text-gray-400 cursor-pointer flex items-start"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        id="remember"
+                                        class="mr-2 rtl:ml-2 rounded-lg accent-red-700"
+                                    />
+                                    Subscribe me to newsletter
+                                </label>
                                 <div
                                     class="mt-10 flex flex-col lg:flex-row justify-between items-center"
                                 >
                                     <button
-                                        type="button"
-                                        onclick="window.location.href='cartPage.html'"
-                                        class="py-5 px-16 border rounded-lg bg-red-700 text-white hover:shadow-xl normal-transition"
+                                        type="submit"
+                                        class="py-5 px-8 border rounded-lg bg-black text-white hover:shadow-xl normal-transition"
                                     >
-                                        Submit
+                                        Update profile
                                     </button>
-                                    <div
-                                        class="text-sm flex flex-col lg:flex-row items-center mt-3 lg:mt-0"
-                                    >
-                                        <p>Don’t Have an Account?</p>
-                                        <a
-                                            href="registration.html"
-                                            class="text-lg font-semibold ml-2 rtl:mr-2"
-                                        >
-                                            Registration
-                                        </a>
-                                    </div>
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -893,5 +1082,18 @@
         <script src="./src/js/owl.carousel.min.js"></script>
         <script src="./src/js/main.js"></script>
         <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <script>
+            function readFile(input) {
+                if (input.files) {
+                    for (img in input.files) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            $('#profile-pic').attr('src', e.target.result);
+                        };
+                        reader.readAsDataURL(input.files[img]);
+                    }
+                }
+            }
+        </script>
     </body>
 </html>
