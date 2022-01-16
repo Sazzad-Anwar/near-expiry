@@ -527,8 +527,8 @@
                             x-show="modalOpen"
                             x-transition:enter="opacity-100 ease-in"
                             x-transition:leave="opacity-0 invisible"
-                            @click.outside="modalOpen = false"
-                            @keyup.scape.enter="modalOpen = false"
+                            x-on:click.outside="modalOpen = false"
+                            x-on:keyup.scape.enter="modalOpen = false"
                         >
                             <div
                                 class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
@@ -547,7 +547,7 @@
 
                                 <!-- modal body -->
                                 <div
-                                    class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+                                    class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full lg:w-[31.25rem]"
                                 >
                                     <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                                         <div class="sm:flex sm:items-start">
@@ -606,7 +606,7 @@
                                                                     Mobile Number:
                                                                 </label>
                                                                 <div
-                                                                    class="px-6 py-4 flex items-center border rounded-lg text-gray-400 w-full"
+                                                                    class="px-6 py-4 flex items-center border rounded-lg text-gray-400 w-full overflow-hidden"
                                                                 >
                                                                     <img
                                                                         class="h-6 w-6 cursor-pointer"
@@ -629,12 +629,12 @@
                                                                         </option>
                                                                     </select>
                                                                     <i
-                                                                        class="bi bi-chevron-down text-xs mr-2 rtl:ml-2 cursor-pointer"
+                                                                        class="bi bi-chevron-down text-xs mr-1 rtl:ml-1 cursor-pointer"
                                                                     ></i>
                                                                     <input
                                                                         type="text"
                                                                         id="mobile-number"
-                                                                        class="focus:outline-none border-l-2 border-gray-400 text-sm pl-3 rtl:pr-3"
+                                                                        class="focus:outline-none border-l-2 border-gray-400 text-sm pl-2 rtl:pr-2"
                                                                         placeholder="1712123456"
                                                                     />
                                                                 </div>
@@ -682,7 +682,9 @@
                                                             </div>
 
                                                             <!-- country -->
-                                                            <div class="my-3 flex items-center">
+                                                            <div
+                                                                class="my-3 flex items-center col-span-2"
+                                                            >
                                                                 <div class="mr-1 rtl:ml-1 w-full">
                                                                     <label
                                                                         for="password"
@@ -720,7 +722,7 @@
                                                                         for="password"
                                                                         class="text-base mb-2 block"
                                                                     >
-                                                                        City:
+                                                                        State:
                                                                     </label>
                                                                     <div
                                                                         class="px-4 py-4 flex justify-between items-center border rounded-lg text-gray-400 w-full"
@@ -747,6 +749,37 @@
                                                                 </div>
                                                             </div>
 
+                                                            <!-- state -->
+                                                            <div class="my-3">
+                                                                <label
+                                                                    for="password"
+                                                                    class="text-base mb-2 block"
+                                                                >
+                                                                    City:
+                                                                </label>
+                                                                <div
+                                                                    class="px-4 py-4 flex justify-between items-center border rounded-lg text-gray-400 w-full"
+                                                                >
+                                                                    <select
+                                                                        name="coty"
+                                                                        id=""
+                                                                        class="appearance-none focus:outline-none cursor-pointer w-full px-2"
+                                                                    >
+                                                                        <option selected>
+                                                                            Dubai
+                                                                        </option>
+                                                                        <option value="">
+                                                                            Sarjah
+                                                                        </option>
+                                                                        <option value="">
+                                                                            Abu Dhabi
+                                                                        </option>
+                                                                    </select>
+                                                                    <i
+                                                                        class="bi bi-chevron-down text-xs mr-2 rtl:ml-2 cursor-pointer"
+                                                                    ></i>
+                                                                </div>
+                                                            </div>
                                                             <!-- Address -->
                                                             <div class="my-3">
                                                                 <label
